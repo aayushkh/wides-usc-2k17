@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WiDeS - USC</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Wireless Devices and Systems Group">
+    <meta name="author" content="Aayush Khanna - aayushkh@usc.edu">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+	<link href="./CSS/stylesheet.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<!-- Fixed Navigation Bar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+	<div class="navbar-header">
+	  	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>                        
+	  	</button>
+	  	<span class="hidden-sm"><a class="navbar-brand" href="index.html#WiDeS">WiDeS</a></span>
+	</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		  	<ul class="nav navbar-nav navbar-right">
+			    <li><a href="index.html#about">ABOUT</a></li>
+			    <li><a href="students.html">FOR STUDENTS</a></li>
+			    <li><a href="#top">FOR SPONSORS</a></li>
+			    <li><a href="research.html">RESEARCH</a></li>
+			    <li><a href="index.html#people">PEOPLE</a></li>
+		  	</ul>
+		</div>
+	</div>
+</nav>
+
+<div id="benefits" class="container-fluid bg-grey">
+	<div class="just">
+		<h2 style="text-align: center;">Benefits</h2><br>
+		<p>Cutting-edge research: the first criterion for any research collaboration is the scientific quality of the output. From fundamental insights into propagation channels to theoretical breakthroughs such as femtocaching, our research changes wireless communications – just see our <a target="_blank" class="Hyperlinks" href="https://scholar.google.com/citations?user=W0wwrucAAAAJ">publications.</a><br><br>
+		<ul>
+			<li><i>Keeping the application in mind</i> : While we deal with fundamental and challenging research topics, we understand that the goal of research is to lead to insights that can be <i> applied in actual devices and systems.</i></li>
+			<li><i>Experience in patents and standards</i> : We understand that industry requires more from a cooperation than their name on a paper. The head of the WiDES group worked for industrial research labs for almost 10 years, and led wireless standardization efforts of one of the world's largest electrical-engineering companies. <b>We thus know how to generate patents, work in international standardization, and keep a project plan.</b></li>
+			<li>Unique fundamental expertise in -
+				<ul><li><a class="Hyperlinks" href="research.html#propChannels">Wireless Propagation Channel Measurement/Modeling</a>, where we also have unique experimental capabilities</li>
+				<li>Wireless Video distribution: femtocaching and D2D-based caching</li>
+				<li>MIMO Systems, in particular hybrid beamforming and cell-free MIMO</li></ul>
+			</li>
+			<li><i>Flexible cooperation structure</i>: We do our best to accommodate the requirements of our sponsors and cooperation, see the section on <a class="Hyperlinks" href="#foc">Forms Of Colaboration</a></li>
+		</ul>
+		</p>
+	</div>
+</div>
+
+<div id="foc" class="container-fluid bg-grey">
+	<div class="just">
+		<h2 style="text-align: center;">Forms Of Colaboration</h2><br>
+		<p><i>Research contracts</i> : This is the standard form of collaboration, in which the sponsor and WiDeS agree on a research scope and deliverables. Regular updates are provided in the forms of reports and/or visits to the sponsors. Rights to intellectual property created during such a collaboration are negotiated with USC’s Steven’s institute. <br><br>
+		<i>Gifts</i>: If you are interested in furthering research in a specific topic, without the need for pre-defined deliverables, a gift to the group might be the right solution. This has the advantage of reduced overhead, less administrative effort, and gives you access to our researchers (and, of course, acknowledgement of your generous contribution in the publications resulting from the research. <br><br>
+		<i>Other Collaborations</i>: We are also always open to other forms of collaborations – scientific collaborations with your research group, in-kind contributions, industry-sponsored PhD students, and summer internships of our PhD students in your labs. <br><br>
+		For further discussions of what form best fits your requirements, please contact <a class="Hyperlinks" href="founder.html">Prof. Molisch.</a> <br><br>
+	</div>
+</div>
+
+<!-- Fixed Image -->
+<div class="fixedimg" style="background-image: url('./Founder/IMG.jpg');">
+</div>
+
+<!-- Footer -->
+<footer class="footer text-center bg-red">
+	<div class="TopFooter">
+		<a href="index.html" title="To Top"><span class="fa fa-arrow-left"></span></a>
+  		<p style="font-size: 12px">Back to WiDeS<br><br></p>
+	    <p>
+	    <a class="footerHyperlinks" href="#">Contact Us</a> |
+	    <a class="footerHyperlinks" href="rulebook.html">Rulebook</a>
+	    </p>
+  	</div>
+	<div class="BottomFooter">
+	    <p>
+	        &copy; 2018 | WiDeS - Wireless Devices and Systems Group | All rights reserved.
+	    </p>
+	</div>
+</footer>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+  	// Add smooth scrolling to all links in navbar + footer link
+  	$(".navbar a[href='#top']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+		// Prevent default anchor click behavior
+		event.preventDefault();
+
+		// Store hash
+		var hash = this.hash;
+
+		// Using jQuery's animate() method to add smooth page scroll
+		// The optional number (1000) specifies the number of milliseconds it takes to scroll to the specified area
+		$('html, body').animate({
+		scrollTop: $(hash).offset().top
+		}, 1000, function(){
+
+		// Add hash (#) to URL when done scrolling (default click behavior)
+		window.location.hash = hash;
+		});
+    } // End if
+	});
+
+})
+
+</script>
+
+</body>
+<html>

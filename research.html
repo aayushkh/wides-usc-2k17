@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WiDeS - USC</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Wireless Devices and Systems Group">
+    <meta name="author" content="Aayush Khanna - aayushkh@usc.edu">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+	<link href="./CSS/stylesheet.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<!-- Fixed Navigation Bar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+	<div class="navbar-header">
+	  	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>                        
+	  	</button>
+	  	<span class="hidden-sm"><a class="navbar-brand" href="index.html#WiDeS">WiDeS</a></span>
+	</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		  	<ul class="nav navbar-nav navbar-right">
+			    <li><a href="index.html#about">ABOUT</a></li>
+			    <li><a href="students.html">FOR STUDENTS</a></li>
+			    <li><a href="sponsors.html">FOR SPONSORS</a></li>
+			    <li><a href="#top">RESEARCH</a></li>
+			    <li><a href="index.html#people">PEOPLE</a></li>
+		  	</ul>
+		</div>
+	</div>
+</nav>
+
+<div id="propChannels" class="container-fluid bg-red just">
+		<br><h1 style="text-align: center;">Propagation Channels</h1><br>
+		<p>Propagation channels are at the core of any wireless system: they determine not only the ultimate performance limits, but also the relative merits of different systems, and even give guidelines of how systems should be designed. The first axiom of wireless systems is : <b><i>to design a wireless system, you must understand the channel in which it will operate.</i></b><br><br>
+		The difficulties in wireless channel modeling are due to the complex propagation processes that form the basis of a wireless channel, involving reflections, scattering, diffraction, and transmission through a large number of irregular objects. For all practical purposes, it is thus necessary to derive simplified descriptions. The degree of admissible simplification, in turn, depends on the system for which the channel is intended. In the past 20 years, wireless systems have changed dramatically, from narrowband analogue systems, to MIMO wideband digital systems, and the deployment scenarios have expanded from cellular to WiFi, car-to-car, and internet of things. As the systems have evolved, so have the channel models needed for the design and evaluation.<br><br>
+		WiDeS is one of the world’s leading institutions for the measurement and modeling of wireless propagation channels. Probably unique in the world, we deal with all aspects of this problem, from the design of measurement equipment, to performing measurement campaigns, to advanced signal processing for parameter extraction, to channel modeling; and we do that for channels ranging from distributed massive MIMO to car-to-car channels to millimeter-wave channels. <br><br>
+		The following gives a high-level overview of our approach and capabilities; for details please see the related <a target="_blank" class="Hyperlinks" href="https://scholar.google.com/citations?user=W0wwrucAAAAJ">publications.</a></p>
+</div>
+
+<!-- Fixed Image -->
+<div class="fixedimgtwo grid propChannels" style="background-image: url('./Images/Research/PropChannels-lg.jpg');">
+		<a class="segmentOne one" href="#channelSounders">
+			<p class="boxxed">Building Channel Sounders</p>
+	  	</a>
+		<a class="segmentOne two" href="#parameterExtraction">
+			<p class="boxxed">Parameter Extraction Methods</p>
+	  	</a>
+		<a class="segmentOne three" href="#channelModelling">
+			<p class="boxxed">Channel Modeling</p>
+		</a>
+		<a class="segmentOne four" href="#mmChannels">
+			<p class="boxxed">mm-Wave Channels</p>
+		</a>
+		<a class="segmentOne five" href="#v2vChannels">
+			<p class="boxxed">V2V Channels</p>
+		</a>
+		<a class="segmentOne six" href="#mMIMO">
+			<p class="boxxed">Massive MIMO and Cloud RAN</p>
+	  	</a>
+</div>
+
+<div id="channelSounders" class="container-fluid bg-grey just">
+	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Building Channel Sounders</h3><br> 
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">An example of our recent work is an ultrawideband, flexible channel sounder for distributed MIMO measurements. A block diagram is shown below. With a wideband (10 GHz bandwidth) arbitrary waveform generator, we are creating multi-tone sounding signals that are distributed, via an optical switch and radio-over-fiber systems, to 16 transmit antenna arrays, each of which consists of 16 antenna elements. A similar configuration uses 16-element arrays to measure received signals at 16 locations and haul them back to an ultra-high-speed digitizer, from where the signals are stored onto a RAID array for processing. Careful calibration allows extraction of channel properties with high-resolution parameter extraction algorithms (link to the HRPE section). <br><br></p>
+	<img class="col-xs-12 col-sm-12 col-md-12 col-lg-12" src="./images/Research/Channels/Building_channel_sounders/distributed_setup.png" alt="Block diagram of distributed MIMO sounder">
+	<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure : Block diagram of distributed MIMO sounder</p>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">A millimeter-wave, real-time MIMO sounder is another key component of our measurement capability, since it allows the dynamic measurement of directional mm-wave characteristics. Compared to the traditional approach of mechanically rotating horn antennas and measuring the impulse response for each horn orientation, our sounder measures a million times faster. This enables the measurement of dynamic directional effects, e.g., how the direction from which the main power comes is changed when a bus is passing by. On the other hand, this also allows to measure in many different locations within a reasonable time (a recent campaign collected 20 million impulse responses in less than a day), thus enabling statistically relevant parameter extraction and modeling. <br><br>
+	The sounder construction is based on the principle of switching beams electronically, instead of using mechanical rotation. The radio frequency units are constructed by Samsung Research America, and the sounder is the result of close collaboration between Samsung and WiDeS. Another key characteristic is the extreme phase stability (hard to achieve at millimeter-wave frequencies), which allows the application of HRPE.  <br><br></p><br>
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+		<img class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Building_channel_sounders/mmWave_sounder.png" alt="Photo of mm-wave sounder">
+		<p style="text-align: center; clear: left;">Figure : Photo of mm-wave sounder</p>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
+		<img class="col-xs-12 col-sm-12 col-md-12 col-lg-12" src="./images/Research/Channels/Building_channel_sounders/V2V_sounder_array.jpg" alt="Photo of V2V sounder">
+		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure : Photo of V2V sounder</p>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<p>Yet another sounder we recently built is a MIMO sounder for vehicle-to-vehicle measurements. To make it more robust and flexible, this sounder is based on software-defined radio (SDR) components from National Instruments. WiDeS members programmed the FPGAs, wrote the control software, and added antenna switching capability to create a sounder that can measure 8x8 MIMO channels at 800 MHz and 5.9 GHz, with a 160 MHz bandwidth.<br><br>
+		<b style="font-size: 20px;">Measurement campaigns</b><br> It is important to keep in mind that a channel measurement is not simply taking a "channel sounder" and hitting the "start" button. Channel measurements require careful planning, proper selection of what is measured, where, and how often it is measured, and an understanding of what we ultimately want to extract from the measurements. Examples are shown in <a class="Hyperlinks" href="#mMIMO">massive MIMO</a>, <a class="Hyperlinks" href="mmChannels">mm-wave</a> and <a class="Hyperlinks" href="v2vChannels">V2V </a></p>	
+	</div>
+	
+</div>
+
+<div id="parameterExtraction" class="container-fluid bg-grey just">
+	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Parameter Extraction Methods</h3><br> 
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">HRPEs are based on a parametric model of the wireless propagation channel, namely that the (double-directional) impulse response consists of a sum of multipath components (MPCs), each of which is characterized by its amplitude, delay, and directions at transmitter and receiver. The task of the estimation algorithm is then to find the parameters of the MPCs from the measurement results of the channel sounders. The first class of algorithms we work with are iterative maximum-likelihood estimators, in particular the RiMax algorithm, an improved variant of the popular SAGE algorithm. RiMAX tends to converge significantly faster than SAGE when multiple signals with similar parameters are present, thanks to the implementation of the joint parameter optimization. For estimating the time evolution of channels, a novel HRPE algorithm based on the extended Kalman Filter (EKF) can exploit the correlation between multipath parameters to further improve the estimation accuracy. The algorithm also solves the association problem between MPCs from adjacent snapshots, and the outcome provides the evolution of signals while mobile terminals move.<br><br>
+	Our main research in this field is -
+	<ul>
+		<li>Incorporating effects that have been neglected in previous, simplified, models, such as polarization, diffuse background radiation, change of antenna characteristics with bandwidth, and interdependency between delay and phase of the MPCs.</li>
+		<li>Acceleration of the computations: since running an unoptimized maximum-likelihood estimator for a single snapshot (taken within a few ms) can take hours even on a fast computer, it is essential to find high-speed computation methods. Our work has already led to order-of-magnitude improvement in runtime, and we are continuing to find new methods to improve efficiency.</li>
+	</ul><br></p>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Besides extracting the parameters of the MPCs, it is also important to identify “clusters”, ie., groups of MPCs that have similar characteristics and behavior. We are working with algorithms from big-data processing and machine learning (such as variations of the K-means algorithm or density-based kernel algorithms.) <br><br>
+	<div class="col-md-1 col-lg-2"></div>
+	<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
+		<img class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Parameter_extraction_methods/clustering_results.jpg" alt="Photo of mm-wave sounder"></img>
+		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure: Clustering from a recent He paper</p>
+	</div>
+	<div class="col-md-1 col-lg-2"></div>
+	</p>
+</div>
+
+<div id="channelModelling" class="container-fluid bg-grey just">
+	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Channel Modeling</h3><br> 
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">The figure below shows the principle of this model. It represents, essentially, the directions of the MPCs at both transmitter and receiver. While the model is now so widely accepted that this seems almost a matter of course, at the time of its introduction it was a paradigm shift away from the representation of the “transfer function matrix” that described in a MIMO system the transfer function from each transmit to each receive antenna element. Our current research revolves around large-scale variations of the double-directional impulse response, and whether it can be expanded into a finite sum of discrete contributions, or a "diffuse background" should be included.<br><br></p>
+	<div class="col-md-1 col-lg-2"></div>
+	<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
+		<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Channel_modeling/Double_Dir_1.jpg" alt="double-directional channel model"></img>
+		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure: Double-directional channel model</p>
+	</div>
+	<div class="col-md-1 col-lg-2"></div>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >Another direction of research revolves around "geometry-based stochastic channel models" (GSCMs). The basic principle is to statistically model the distribution of scatterers in space (by prescribing a probability density function of their location); impulse responses (including double-directional impulse responses) can then be found by a simplified ray tracing procedure that assumes that only single-scattering or double-scattering processes can occur. The origins of GSCMs go back to the 1970s, when a rings of scatterers around the MS was used to compute the effectiveness of diversity antennas at the BS. We were the first to generalize the model to the MIMO case, showing that many of the simplifications of the "diversity-antenna" scenario do not hold for MIMO, and proposing new modeling methods that solved this problem. Our current work focuses on adopting this model to the specific challenges of car-to-car propagation channels.
+	</p>
+</div>
+
+<div id="mmChannels" class="container-fluid bg-grey just">
+	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">mm-Wave Channels</h3><br> 
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">In the following, we show a few examples of our measurement and modeling results.
+	</p>
+</div>
+
+<div id="v2vChannels" class="container-fluid bg-grey just">
+	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">V2V Channels</h3><br> 
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">In the following, we show a few examples of our measurement and modeling results.
+	</p>
+</div>
+
+
+<div id="mMIMO" class="container-fluid bg-grey just">
+	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Massive MIMO and Cloud RAN</h3><br> 
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">In the following, we show a few examples of our measurement and modeling results.
+	</p>
+</div>
+
+<div id="commSysDesign" class="container-fluid bg-red">
+	<div class="just">
+	<h1 style="text-align: center;">Communication System Design</h1><br>
+	</div>
+</div>
+
+<!-- Fixed Image -->
+<div class="fixedimgtwo" style="background-image: url('./Images/Research/commSysDesign-lg.jpg');">
+	<div class="grid commSysDesign"> 
+		<a class="segmentOne one" href="#MIMOSystems">
+			<p class="boxxed">MIMO Systems</p>
+	  	</a>
+		<a class="segmentOne two" href="#UWBComm">
+			<p class="boxxed">Ultrawideband Communication and Localization</p>
+		</a>
+		<a class="segmentOne three" href="#WirelessVidDist">
+			<p class="boxxed">Wireless Video Distribution</p>
+		</a>
+		<a class="segmentOne four" href="#NovelModMux">
+			<p class="boxxed">Novel Modulation and Multiplexing Methods</p>
+		</a>
+	</div>
+</div>
+
+<div id="MIMOSystems" class="container-fluid bg-grey just">
+	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">MIMO Systems</h3><br> 
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">In the following, we show a few examples of our measurement and modeling results.
+	</p>
+</div>
+
+<div id="UWBComm" class="container-fluid bg-grey just">
+	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Ultrawideband Communication and Localization</h3><br> 
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<ul>
+		<li ><b>Design of low-complexity UWB transceivers</b> : transmitted-reference transceivers allow the demodulation of UWB signals without the construction of coherent receivers (which often would be expensive and energy-consuming because of the large bandwidth and associated high sampling rate of the receivers. We are developing and prototyping a variety of low-complexity implementations. We furthermore investigate the use of extreme UWB spreading (10 GHz bandwidth) for jammer suppression.<br><br>
+		<div class="col-md-1 col-lg-2"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/UWB/main/quals_example_network.png" alt="UWB TR receiver"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure : UWB TR receiver</p>
+		</div>
+		<div class="col-md-1 col-lg-2"></div>
+		<li style="clear: left;"><b>Localization based on time-of-arrival (TOA)</b> : UWB signals are well suited for time-of-arrival localization, because they provide highly accurate range measurements. However, translating these range measurements to precise positions is nontrivial. We are dealing such systems when real-world limitations are present, such as -
+		<ol>
+			<li> Interference from other (active) users</li>
+			<li> Multipath.</li>
+			<li> Blocking of the line-of-sight for some of the ranging measurements </li>
+			<li> Multi-target problems in passive localization, i.e., several targets with similar radar signature are present at different locations</li>
+		</ol>
+		Such practical limitations lead to challenging fundamental new limitations that we have been exploring for a number of years, and from which in turn we derive practical algorithms whose performance can approach those limits.<br><br>
+		</li>
+	</ul><br>
+	</p>
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+		<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/UWB/main/localization_applns-eps-converted-to-1.jpg" alt="Localization based on time-of-arrival (TOA)"></img>
+		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure : Localization based on time-of-arrival (TOA)</p>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
+	<p style="margin-top: 20px;" class="col-xs-12 col-sm-0 col-md-12 col-lg-12">In the following, we show a few examples of our measurement and modeling results. </p>
+</div>
+
+<div id="WirelessVidDist" class="container-fluid bg-grey just">
+	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Wireless Video Distribution</h3><br> 
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Our new architecture rests on two pillars -
+	<ul>
+		<li><b>Femtocaching</b>, where a small base station without backhaul link, but with a large cache, stores popular files, and transmits them upon demand to the users. Since those stations do not need backhaul, they are extremely cheap to deploy, and since they can be placed with high density, result in high spectral efficiency.</li>
+		<li><b>Caching on devices together with device-to-device communications</b>: The concept of femtocaching can be pushed further by caching video files on the user devices themselves – while the caches would not be large enough to store all the videos a particular person might want to watch, the aggregate cache of the users in a particular area is large enough. Then, a user can get a required file via spectrally efficient D2D communication from another device, without having to go via the base station.</li>
+	</ul> <br></p>
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
+	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
+		<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/Wireless_Video/main/D2D_setup-1.jpg" alt="System diagram of D2D system "></img>
+		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure: System diagram of D2D system </p>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
+
+	<p style="clear: left; margin-left: 15px;" >At WiDeS, we are working at many aspects of such a system, including - 
+	<ul>
+		<li>Fundamental, information-theoretic limits on throughput, energy efficiency, and latency.</li>
+		<li>Experimental investigation of popularity distributions and their spatio-temporal concentration, as well as machine-learning based algorithms for prediction.</li>
+		<li>Algorithms for caching and assignment of caches to users for downloading.</li>
+		<li>Prototyping and testbed construction.</li>
+	</ul> </p>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> Besides these video-caching oriented networking problems, we also consider issues of joint communication, computation, and caching. WiDeS has developed, in collaboration with Bell Labs, Lyapunov-drift based algorithms for assigning resources at data centers and routing methods for both wired and wireless networks. 
+	</p>
+</div>
+
+
+<div id="NovelModMux" class="container-fluid bg-grey just">
+	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Novel Modulation and Multiplexing Methods</h3><br> 
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">We investigate novel approaches, such as -
+	<ul>
+		<li><b>Orbital Angular Momentum (OAM) multiplexing</b> : OAM can be interpreted as a “phase twist” imposed on a wave propagating down the axis. Different OAM “modes” with different phase twists (but propagating down the same axis) are orthogonal to each other, and thus can carry different data streams. This feature is especially useful for line-of-sight links that need to carry several Gbit/s. A key advantage of OAM modes is that they can be separate by analog components, thus obviating the need for spatial equalizers operating at ultra-high computational speeds. In collaboration with Prof. Alan Willner (link), the pioneer of OAM, we have worked on theory and prototyping of OAM in the mm-wave regime, and – inter alia – demonstrated 32 GBit/s transmission in the 28 GHz band.</li><br>
+		<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
+		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/Modulation/main/OAM_Principle-1.jpg" alt="Principle of OAM"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure: Principle of OAM </p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
+		<li style="clear: left;"><b>Orthogonal Time Frequency Space (OTFS) modulation</b> : OTFS is a novel modulation format that can be interpreted as modulating symbols in the delay-Doppler domain (instead of the time-frequency domain). It provides full time- and frequency diversity, and is thus especially well suited for communications in environments with high mobility, where no feedback is possible. But it also shows important advantages in large MIMO systems (better scaling of complexity and/or performance with number of antennas) and internet of things (better power efficiency). We are investigating both fundamental performance and low-complexity practical algorithms.</li>
+		<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
+		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/Modulation/main/OTFS_principle.png" alt="Principle of OTFS"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure: Principle of OTFS </p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
+	</ul><br></p>
+</div>
+
+
+<!-- Fixed Image -->
+<div class="fixedimg" style="background-image: url('./Founder/IMG.jpg');">
+</div>
+
+<!-- Footer -->
+<footer class="footer text-center bg-red">
+	<div class="TopFooter">
+		<a href="index.html" title="To Top"><span class="fa fa-arrow-left"></span></a>
+  		<p style="font-size: 12px">Back to WiDeS<br><br></p>
+	    <p>
+	    <a class="footerHyperlinks" href="#">Contact Us</a> |
+	    <a class="footerHyperlinks" href="rulebook.html">Rulebook</a>
+	    </p>
+  	</div>
+	<div class="BottomFooter">
+	    <p>
+	        &copy; 2018 | WiDeS - Wireless Devices and Systems Group | All rights reserved.
+	    </p>
+	</div>
+</footer>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+  	// Add smooth scrolling to all links in navbar + footer link
+  	$(".navbar a[href='#top'], .commSysDesign a, .propChannels a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+		// Prevent default anchor click behavior
+		event.preventDefault();
+
+		// Store hash
+		var hash = this.hash;
+
+		// Using jQuery's animate() method to add smooth page scroll
+		// The optional number (1000) specifies the number of milliseconds it takes to scroll to the specified area
+		$('html, body').animate({
+		scrollTop: $(hash).offset().top
+		}, 1000, function(){
+
+		// Add hash (#) to URL when done scrolling (default click behavior)
+		window.location.hash = hash;
+		});
+    } // End if
+	});
+
+})
+
+</script>
+
+</body>
+<html>
