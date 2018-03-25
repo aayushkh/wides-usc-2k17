@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
   	// Add smooth scrolling to all links in navbar + footer link
-  	$(".navbar a, footer a[href='#WiDeS'], .carousel .text a").on('click', function(event) {
+  	$(".navbar a, footer a[href='#WiDeS'], .carousel .text a, .dropbtn").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
 		// Prevent default anchor click behavior
@@ -15,7 +15,7 @@ $(document).ready(function(){
 		// The optional number (1000) specifies the number of milliseconds it takes to scroll to the specified area
 		$('html, body').animate({
 		scrollTop: $(hash).offset().top
-		}, 1000, function(){
+		}, 'slow', function(){
 
 		// Add hash (#) to URL when done scrolling (default click behavior)
 		window.location.hash = hash;
@@ -27,7 +27,19 @@ $(document).ready(function(){
 		$(this).find('.card').toggleClass('flipped');
 	});
 
-	$('.customer-logos').slick({
+	$('.single-item').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 1000,
+    arrows: true,
+    dots: false,
+    fade: false,
+    cssEase: 'linear',
+    pauseOnHover: true
+  });
+
+    $('.customer-logos').slick({
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
@@ -49,12 +61,22 @@ $(document).ready(function(){
       breakpoint: 768,
       settings: {
         slidesToShow: 2
-      }
-    }]
-  	});
+    }
+  }]
+  });
 
-	$('.carousel').carousel({
+	$('#myCarousel').carousel({
 	interval: 1000 * 15
 	});
+
+  $('#newsCarousel').carousel({
+  interval: 1000 * 15
+  });
+
+  $(".item div.news-fill, .carousel-control.right, .carousel-control.left").hover(function(){
+      $(".carousel.textNews").removeClass("hidden");
+      }, function(){
+      $(".carousel.textNews").addClass("hidden");
+  });
 
 })

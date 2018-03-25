@@ -102,16 +102,80 @@ a:hover {
   	color: #FFFFFF !important;
 }
 .navbar-nav li.active a {
-  	color: #A31934 !important;
-  	background-color: #FFFFFF !important;
+  	color: #FFFFFF !important;
+  	background-color: #A31934 !important;
 }
 .navbar-nav li a:hover {
-  	color: #CFB53B !important;
+  	color: #A31934 !important;
   	background-color: #FFFFFF !important;
 }
 .navbar-default .navbar-toggle {
   	border-color: transparent;
   	color: #FFFFFF !important;
+}
+
+.navbar-nav li.active div {
+  	color: #A31934 !important;
+  	background-color: #FFFFFF !important;
+}
+
+.dropbtn {
+    background-color: inherit;
+    padding: 15px 15px;
+    font-size: 12px;
+    border: none;
+  	font-family: Montserrat, sans-serif;
+  	line-height: 1.6 !important;
+  	letter-spacing: 5px;
+  	cursor: pointer;
+}
+
+.dropbtn:hover {
+    background-color: #FFFFFF;
+    color: #CFB53B;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown a {
+	background-color: inherit;
+	color: inherit;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    color: #A31934;
+    min-width:120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+	background-color: #A31934;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #FFFFFF;
+    color: #A31934;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #FFFFFF;
+    color: #A31934;
 }
 
 /* ------------------ Carousel ------------------ */
@@ -147,9 +211,15 @@ a:hover {
 .carousel .three {
 	background-color: #A31934E0;
 	margin: auto auto;
+	padding : 20px 20px;
 }
 .carousel .text {
 	font-size: 18px;
+}
+.carousel .textNews {
+	font-size: 14px;
+	line-height: 1.6em;
+	text-align: justify;
 }
 .carousel .text a {
 	color: #CFB53B;
@@ -165,6 +235,22 @@ a:hover {
 }
 .glyphicon-chevron-right:before {
 	font-size: 40px;
+}
+
+/* ---------------------- News ---------------------- */
+
+.carousel-caption.top {
+    top: 0;
+    bottom: auto;
+}
+.news-fill {
+	height: 500px;
+	margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
 }
 
 /* ------------------ For Students ------------------ */
@@ -272,6 +358,9 @@ a:hover {
 	{
 	    display: none;
 	    float: left;
+	    text-align: center;
+		color: #419be0;
+		background: white;
 	    height: 100%;
 	}
 	.slick-initialized .slick-slide
@@ -468,6 +557,10 @@ a.footerHyperlinks:hover {
 	color: #A31934;
   	font-family: Montserrat, sans-serif;
   	font-style: italic;
+}
+.bg-grey {
+	background-color: #FFFFFF;
+	color: #A31934;
 }
 .bg-grey {
 	background-color: #FFFFFF;

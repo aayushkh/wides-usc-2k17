@@ -79,7 +79,7 @@
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">A millimeter-wave, real-time MIMO sounder is another key component of our measurement capability, since it allows the dynamic measurement of directional mm-wave characteristics. Compared to the traditional approach of mechanically rotating horn antennas and measuring the impulse response for each horn orientation, our sounder measures a million times faster. This enables the measurement of dynamic directional effects, e.g., how the direction from which the main power comes is changed when a bus is passing by. On the other hand, this also allows to measure in many different locations within a reasonable time (a recent campaign collected 20 million impulse responses in less than a day), thus enabling statistically relevant parameter extraction and modeling. <br><br>
 	The sounder construction is based on the principle of switching beams electronically, instead of using mechanical rotation. The radio frequency units are constructed by Samsung Research America, and the sounder is the result of close collaboration between Samsung and WiDeS. Another key characteristic is the extreme phase stability (hard to achieve at millimeter-wave frequencies), which allows the application of HRPE.  <br><br></p><br>
 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-		<img class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Building_channel_sounders/mmWave_sounder.png" alt="Photo of mm-wave sounder">
+		<img class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Building_channel_sounders/mmWave_sounder.jpg" alt="Photo of mm-wave sounder">
 		<p style="text-align: center; clear: left;">Figure : Photo of mm-wave sounder</p>
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
@@ -90,6 +90,12 @@
 		<p>Yet another sounder we recently built is a MIMO sounder for vehicle-to-vehicle measurements. To make it more robust and flexible, this sounder is based on software-defined radio (SDR) components from National Instruments. WiDeS members programmed the FPGAs, wrote the control software, and added antenna switching capability to create a sounder that can measure 8x8 MIMO channels at 800 MHz and 5.9 GHz, with a 160 MHz bandwidth.<br><br>
 		<b style="font-size: 20px;">Measurement campaigns</b><br> It is important to keep in mind that a channel measurement is not simply taking a "channel sounder" and hitting the "start" button. Channel measurements require careful planning, proper selection of what is measured, where, and how often it is measured, and an understanding of what we ultimately want to extract from the measurements. Examples are shown in <a class="Hyperlinks" href="#mMIMO">massive MIMO</a>, <a class="Hyperlinks" href="mmChannels">mm-wave</a> and <a class="Hyperlinks" href="v2vChannels">V2V </a></p>	
 	</div>
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+		<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Building_channel_sounders/V2V_sounder_photo.jpg" alt="Principle of OTFS"></img>
+		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure : V2V Sounder</p>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
 	
 </div>
 
@@ -102,13 +108,25 @@
 		<li>Acceleration of the computations: since running an unoptimized maximum-likelihood estimator for a single snapshot (taken within a few ms) can take hours even on a fast computer, it is essential to find high-speed computation methods. Our work has already led to order-of-magnitude improvement in runtime, and we are continuing to find new methods to improve efficiency.</li>
 	</ul><br></p>
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Besides extracting the parameters of the MPCs, it is also important to identify “clusters”, ie., groups of MPCs that have similar characteristics and behavior. We are working with algorithms from big-data processing and machine learning (such as variations of the K-means algorithm or density-based kernel algorithms.) <br><br>
+	</p>
 	<div class="col-md-1 col-lg-2"></div>
 	<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
 		<img class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Parameter_extraction_methods/clustering_results.jpg" alt="Photo of mm-wave sounder"></img>
 		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure: Clustering from a recent He paper</p>
 	</div>
-	<div class="col-md-1 col-lg-2"></div>
-	</p>
+<!-- 	<div class="col-md-1 col-lg-2"></div>
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+		<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Parameter_extraction_methods/Rimax_flowchart.jpg" alt="Principle of OTFS"></img>
+		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure : Rimax Flowchart</p>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+		<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Parameter_extraction_methods/Algorithm.jpg" alt="Principle of OTFS"></img>
+		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure : Rimax Algorithm</p>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div> -->
 </div>
 
 <div id="channelModelling" class="container-fluid bg-grey just">
