@@ -31,10 +31,21 @@
 	</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 		  	<ul class="nav navbar-nav navbar-right">
-			    <li><a href="index.html#about">ABOUT</a></li>
-			    <li><a href="students.html">FOR STUDENTS</a></li>
-			    <li><a href="sponsors.html">FOR SPONSORS</a></li>
-			    <li><a href="research.html">RESEARCH</a></li>
+			    <li class="dropdown">
+					<div onclick="window.location = 'about.html'" class="dropbtn about">ABOUT</div>
+					<div class="dropdown-content hidden-xs hidden-sm">
+						<a class="news" href="index.html#news">NEWS</a>
+					</div>
+			    </li>
+			    <li><a href="index.html#students">FOR STUDENTS</a></li>
+			    <li><a href="index.html#sponsors">FOR SPONSORS</a></li>
+			    <li class="dropdown">
+					<div onclick="window.location = 'research.html'" class="dropbtn research">RESEARCH</div>
+					<div class="dropdown-content hidden-xs hidden-sm">
+						<a href="research.html#propChannels">PROPOGATION CHANNELS</a>
+						<a href="research.html#commSysDesign">COMMUNICATION SYSTEMS</a>
+					</div>
+				</li>
 			    <li><a href="index.html#people">PEOPLE</a></li>
 		  	</ul>
 		</div>
@@ -63,6 +74,5 @@
 	    </p>
 	</div>
 </footer>
-
 </body>
 </html>

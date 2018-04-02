@@ -31,10 +31,21 @@
 	</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 		  	<ul class="nav navbar-nav navbar-right">
-			    <li><a href="index.html#about">ABOUT</a></li>
-			    <li><a href="students.html">FOR STUDENTS</a></li>
-			    <li><a href="sponsors.html">FOR SPONSORS</a></li>
-			    <li><a href="#top">RESEARCH</a></li>
+			    <li class="dropdown">
+					<div onclick="window.location = 'about.html'" class="dropbtn about">ABOUT</div>
+					<div class="dropdown-content hidden-xs hidden-sm">
+						<a class="news" href="index.html#news">NEWS</a>
+					</div>
+			    </li>
+			    <li><a href="index.html#students">FOR STUDENTS</a></li>
+			    <li><a href="index.html#sponsors">FOR SPONSORS</a></li>
+			    <li class="dropdown">
+					<div onclick="window.location = 'research.html'" class="dropbtn research">RESEARCH</div>
+					<div class="dropdown-content hidden-xs hidden-sm">
+						<a href="#propChannels">PROPOGATION CHANNELS</a>
+						<a href="#commSysDesign">COMMUNICATION SYSTEMS</a>
+					</div>
+				</li>
 			    <li><a href="index.html#people">PEOPLE</a></li>
 		  	</ul>
 		</div>
@@ -75,33 +86,46 @@
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Building Channel Sounders</h3><br> 
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">An example of our recent work is an ultrawideband, flexible channel sounder for distributed MIMO measurements. A block diagram is shown below. With a wideband (10 GHz bandwidth) arbitrary waveform generator, we are creating multi-tone sounding signals that are distributed, via an optical switch and radio-over-fiber systems, to 16 transmit antenna arrays, each of which consists of 16 antenna elements. A similar configuration uses 16-element arrays to measure received signals at 16 locations and haul them back to an ultra-high-speed digitizer, from where the signals are stored onto a RAID array for processing. Careful calibration allows extraction of channel properties with high-resolution parameter extraction algorithms (link to the HRPE section). <br><br></p>
 	<img class="col-xs-12 col-sm-12 col-md-12 col-lg-12" src="./images/Research/Channels/Building_channel_sounders/distributed_setup.png" alt="Block diagram of distributed MIMO sounder">
-	<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure : Block diagram of distributed MIMO sounder</p>
+	<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><br>Block diagram of distributed MIMO sounder<br><br></p>
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">A millimeter-wave, real-time MIMO sounder is another key component of our measurement capability, since it allows the dynamic measurement of directional mm-wave characteristics. Compared to the traditional approach of mechanically rotating horn antennas and measuring the impulse response for each horn orientation, our sounder measures a million times faster. This enables the measurement of dynamic directional effects, e.g., how the direction from which the main power comes is changed when a bus is passing by. On the other hand, this also allows to measure in many different locations within a reasonable time (a recent campaign collected 20 million impulse responses in less than a day), thus enabling statistically relevant parameter extraction and modeling. <br><br>
 	The sounder construction is based on the principle of switching beams electronically, instead of using mechanical rotation. The radio frequency units are constructed by Samsung Research America, and the sounder is the result of close collaboration between Samsung and WiDeS. Another key characteristic is the extreme phase stability (hard to achieve at millimeter-wave frequencies), which allows the application of HRPE.  <br><br></p><br>
-	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-		<img class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Building_channel_sounders/mmWave_sounder.jpg" alt="Photo of mm-wave sounder">
-		<p style="text-align: center; clear: left;">Figure : Photo of mm-wave sounder</p>
+	<div class="col-xs-12 col-sm-8 col-md-5 col-lg-5">
+		<img style="height: 500px; justify-content: center;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style=" margin-bottom: 20px;" src="./images/Research/Channels/Building_channel_sounders/mmWave_sounder.jpg" alt="Photo of mm-wave sounder">
+		<p style="text-align: center; clear: left;"><br>Photo of mm-wave sounder<br><br></p>
 	</div>
-	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
-		<img class="col-xs-12 col-sm-12 col-md-12 col-lg-12" src="./images/Research/Channels/Building_channel_sounders/V2V_sounder_array.jpg" alt="Photo of V2V sounder">
-		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure : Photo of V2V sounder</p>
+	<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+		<img style="height: 500px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" src="./images/Research/Channels/Building_channel_sounders/V2V_sounder_array.jpg" alt="Photo of V2V sounder">
+		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><br>Photo of V2V sounder<br><br></p>
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<p>Yet another sounder we recently built is a MIMO sounder for vehicle-to-vehicle measurements. To make it more robust and flexible, this sounder is based on software-defined radio (SDR) components from National Instruments. WiDeS members programmed the FPGAs, wrote the control software, and added antenna switching capability to create a sounder that can measure 8x8 MIMO channels at 800 MHz and 5.9 GHz, with a 160 MHz bandwidth.<br><br>
-		<b style="font-size: 20px;">Measurement campaigns</b><br> It is important to keep in mind that a channel measurement is not simply taking a "channel sounder" and hitting the "start" button. Channel measurements require careful planning, proper selection of what is measured, where, and how often it is measured, and an understanding of what we ultimately want to extract from the measurements. Examples are shown in <a class="Hyperlinks" href="#mMIMO">massive MIMO</a>, <a class="Hyperlinks" href="mmChannels">mm-wave</a> and <a class="Hyperlinks" href="v2vChannels">V2V </a></p>	
+		<p>Yet another sounder we recently built is a MIMO sounder for vehicle-to-vehicle measurements. To make it more robust and flexible, this sounder is based on software-defined radio (SDR) components from National Instruments. WiDeS members programmed the FPGAs, wrote the control software, and added antenna switching capability to create a sounder that can measure 8x8 MIMO channels at 800 MHz and 5.9 GHz, with a 160 MHz bandwidth.<br><br></p>
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
 	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
 		<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Building_channel_sounders/V2V_sounder_photo.jpg" alt="Principle of OTFS"></img>
-		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure : V2V Sounder</p>
+		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">V2V Sounder</p>
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
-	
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<p><b style="font-size: 20px;">Measurement campaigns</b><br> It is important to keep in mind that a channel measurement is not simply taking a "channel sounder" and hitting the "start" button. Channel measurements require careful planning, proper selection of what is measured, where, and how often it is measured, and an understanding of what we ultimately want to extract from the measurements. Examples are shown in <a class="Hyperlinks" href="#mMIMO">massive MIMO</a>, <a class="Hyperlinks" href="mmChannels">mm-wave</a> and <a class="Hyperlinks" href="v2vChannels">V2V </a></p>	
+	</div>	
 </div>
 
 <div id="parameterExtraction" class="container-fluid bg-grey just">
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Parameter Extraction Methods</h3><br> 
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">HRPEs are based on a parametric model of the wireless propagation channel, namely that the (double-directional) impulse response consists of a sum of multipath components (MPCs), each of which is characterized by its amplitude, delay, and directions at transmitter and receiver. The task of the estimation algorithm is then to find the parameters of the MPCs from the measurement results of the channel sounders. The first class of algorithms we work with are iterative maximum-likelihood estimators, in particular the RiMax algorithm, an improved variant of the popular SAGE algorithm. RiMAX tends to converge significantly faster than SAGE when multiple signals with similar parameters are present, thanks to the implementation of the joint parameter optimization. For estimating the time evolution of channels, a novel HRPE algorithm based on the extended Kalman Filter (EKF) can exploit the correlation between multipath parameters to further improve the estimation accuracy. The algorithm also solves the association problem between MPCs from adjacent snapshots, and the outcome provides the evolution of signals while mobile terminals move.<br><br>
+	</p>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+			<img style="height: 450px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Parameter_extraction_methods/Algorithm.jpg" alt="Rimax Algorithm">
+			<p style="text-align: center; clear: left;"><br>Rimax Algorithm<br><br></p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+			<img style="height: 450px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" src="./images/Research/Channels/Parameter_extraction_methods/Rimax_flowchart.jpg" alt="Rimax Flowchart">
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><br>Rimax Flowchart<br><br></p>
+		</div>
+	</div>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	Our main research in this field is -
 	<ul>
 		<li>Incorporating effects that have been neglected in previous, simplified, models, such as polarization, diffuse background radiation, change of antenna characteristics with bandwidth, and interdependency between delay and phase of the MPCs.</li>
@@ -109,24 +133,14 @@
 	</ul><br></p>
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Besides extracting the parameters of the MPCs, it is also important to identify “clusters”, ie., groups of MPCs that have similar characteristics and behavior. We are working with algorithms from big-data processing and machine learning (such as variations of the K-means algorithm or density-based kernel algorithms.) <br><br>
 	</p>
-	<div class="col-md-1 col-lg-2"></div>
-	<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
-		<img class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Parameter_extraction_methods/clustering_results.jpg" alt="Photo of mm-wave sounder"></img>
-		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure: Clustering from a recent He paper</p>
+	<div class="row">
+		<div class="col-md-1 col-lg-2"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
+			<img class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Parameter_extraction_methods/clustering_results.jpg" alt="Photo of mm-wave sounder"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><br>Clustering from a recent He paper</p>
+		</div>
+		<div class="col-md-1 col-lg-2"></div>
 	</div>
-<!-- 	<div class="col-md-1 col-lg-2"></div>
-	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
-	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-		<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Parameter_extraction_methods/Rimax_flowchart.jpg" alt="Principle of OTFS"></img>
-		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure : Rimax Flowchart</p>
-	</div>
-	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
-	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
-	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-		<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Parameter_extraction_methods/Algorithm.jpg" alt="Principle of OTFS"></img>
-		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure : Rimax Algorithm</p>
-	</div>
-	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div> -->
 </div>
 
 <div id="channelModelling" class="container-fluid bg-grey just">
@@ -135,23 +149,125 @@
 	<div class="col-md-1 col-lg-2"></div>
 	<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
 		<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Channel_modeling/Double_Dir_1.jpg" alt="double-directional channel model"></img>
-		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure: Double-directional channel model</p>
+		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Double-directional channel model<br><br></p>
 	</div>
 	<div class="col-md-1 col-lg-2"></div>
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >Another direction of research revolves around "geometry-based stochastic channel models" (GSCMs). The basic principle is to statistically model the distribution of scatterers in space (by prescribing a probability density function of their location); impulse responses (including double-directional impulse responses) can then be found by a simplified ray tracing procedure that assumes that only single-scattering or double-scattering processes can occur. The origins of GSCMs go back to the 1970s, when a rings of scatterers around the MS was used to compute the effectiveness of diversity antennas at the BS. We were the first to generalize the model to the MIMO case, showing that many of the simplifications of the "diversity-antenna" scenario do not hold for MIMO, and proposing new modeling methods that solved this problem. Our current work focuses on adopting this model to the specific challenges of car-to-car propagation channels.
 	</p>
+	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
+		<img style="height: 250px; text-align: center;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style=" margin-bottom: 20px;" src="./images/Research/Channels/Channel_modeling/pathloss_simulation_1-1.jpg" alt="Pathloss Simulation-1">
+		<p style="text-align: center; clear: left;"><br>Pathloss Simulation-1<br><br></p>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
+		<img style="height: 250px; justify-content: center;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style=" margin-bottom: 20px;" src="./images/Research/Channels/Channel_modeling/pathloss_simulation_2-1.jpg" alt="Pathloss Simulation-2">
+		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><br>Pathloss Simulation-2<br><br></p>
+	</div>
 </div>
 
 <div id="mmChannels" class="container-fluid bg-grey just">
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">mm-Wave Channels</h3><br> 
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">In the following, we show a few examples of our measurement and modeling results.
 	</p>
+	<div class="row">
+		<div class="col-md-1 col-lg-2"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/mm-wave_channels/APS_suburban_mmwave-1.jpg" alt="APS_suburban_mmwave-1"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">APS_suburban_mmwave-1<br><br></p>
+		</div>
+		<div class="col-md-1 col-lg-2"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-1 col-lg-2"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/mm-wave_channels/delay_spread_UWB_outdoor-1.jpg" alt="delay_spread_UWB_outdoor-1"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">delay_spread_UWB_outdoor-1<br><br></p>
+		</div>
+		<div class="col-md-1 col-lg-2"></div>		
+	</div>
+	<div class="row">
+		<div class="col-md-1 col-lg-2"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/mm-wave_channels/dynamic_directional-1.jpg" alt="dynamic_directional-1"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">dynamic_directional-1<br><br></p>
+		</div>
+		<div class="col-md-1 col-lg-2"></div>		
+	</div>
+	<div class="row">
+		<div class="col-md-1 col-lg-3"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/mm-wave_channels/mmWave_samplePDP-1.jpg" alt="mmWave_samplePDP-1"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">mmWave_samplePDP-1<br><br></p>
+		</div>
+		<div class="col-md-1 col-lg-3"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-1 col-lg-3"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/mm-wave_channels/MPCs_suburban_mmwave-1.jpg" alt="MPCs_suburban_mmwave-1"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">MPCs_suburban_mmwave-1<br><br></p>
+		</div>
+		<div class="col-md-1 col-lg-3"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-1 col-lg-3"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/mm-wave_channels/UWB_environment_warehouse-1.jpg" alt="UWB_environment_warehouse-1"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">UWB_environment_warehouse-1<br><br></p>
+		</div>
+		<div class="col-md-1 col-lg-3"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-1 col-lg-3"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/mm-wave_channels/UWB_warehouse_PDP-1.jpg" alt="UWB_warehouse_PDP-1"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">UWB_warehouse_PDP-1<br><br></p>
+		</div>
+		<div class="col-md-1 col-lg-3"></div>
+	</div>
 </div>
 
 <div id="v2vChannels" class="container-fluid bg-grey just">
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">V2V Channels</h3><br> 
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">In the following, we show a few examples of our measurement and modeling results.
 	</p>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/V2V_channels/T2T_Urban_OppoD_Xing.jpg" alt="T2T_Urban_OppoD_Xing"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">T2T_Urban_OppoD_Xing<br><br></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-1 col-lg-2"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/V2V_channels/t2c_delay_time_trackedpaths.jpg" alt="t2c_delay_time_trackedpaths"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">t2c_delay_time_trackedpaths<br><br></p>
+		</div>
+		<div class="col-md-1 col-lg-2"></div>		
+	</div>
+	<div class="row">
+		<div class="col-md-1 col-lg-2"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/V2V_channels/checking_setup-1.jpg" alt="checking_setup-1"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">checking_setup-1<br><br></p>
+		</div>
+		<div class="col-md-1 col-lg-2"></div>		
+	</div>
+	<div class="row">
+		<div class="col-md-1 col-lg-3"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/V2V_channels/HSR_results-1.jpg" alt="HSR_results-1"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">HSR_results-1<br><br></p>
+		</div>
+		<div class="col-md-1 col-lg-3"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-1 col-lg-3"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/V2V_channels/HSR_scenario-1.jpg" alt="HSR_scenario-1"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">HSR_scenario-1<br><br></p>
+		</div>
+		<div class="col-md-1 col-lg-3"></div>
+	</div>
 </div>
 
 
@@ -159,11 +275,31 @@
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Massive MIMO and Cloud RAN</h3><br> 
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">In the following, we show a few examples of our measurement and modeling results.
 	</p>
+	<div class="row">
+		<div class="col-md-1 col-lg-3"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Massive_MIMO/Cologne_results-1.jpg" alt="Cologne_results-1"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Cologne_results-1<br><br></p>
+		</div>
+		<div class="col-md-1 col-lg-3"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-1 col-lg-3"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Massive_MIMO/Cologne_scenario-1.jpg" alt="Cologne_scenario-1"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Cologne_scenario-1<br><br></p>
+		</div>
+		<div class="col-md-1 col-lg-3"></div>
+	</div>
 </div>
 
 <div id="commSysDesign" class="container-fluid bg-red">
 	<div class="just">
 	<h1 style="text-align: center;">Communication System Design</h1><br>
+	<p>
+	An exciting challenge in wireless system design is the need to merge insights from many different disciplines. From communication theory to networking, optimization theory, to physics, system design requires both broad and deep thinking.<br><br>
+	WiDeS has established itself as a pioneer in a number of select topics, namely MIMO systems (particularly reduced-complexity MIMO transceivers, wireless video distribution, ultrawideband communication and localization, and novel modulation and multiplexing methods (particularly OAM and OTFS). In all of these fields we follow our philosophy of finding innovative approaches that are inspired by practical applications, but grounded in solid theory.
+	</p>
 	</div>
 </div>
 
@@ -189,6 +325,22 @@
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">MIMO Systems</h3><br> 
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">In the following, we show a few examples of our measurement and modeling results.
 	</p>
+	<div class="row">
+		<div class="col-md-1 col-lg-3"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/MIMO/main/Fig_optL_illustration.jpg" alt="Fig_optL_illustration"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Fig_optl_illustration<br><br></p>
+		</div>
+		<div class="col-md-1 col-lg-3"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-1 col-lg-3"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/MIMO/main/HBF-1.jpg" alt="HBF-1"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">HBF-1<br><br></p>
+		</div>
+		<div class="col-md-1 col-lg-3"></div>
+	</div>
 </div>
 
 <div id="UWBComm" class="container-fluid bg-grey just">
@@ -199,7 +351,7 @@
 		<div class="col-md-1 col-lg-2"></div>
 		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
 			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/UWB/main/quals_example_network.png" alt="UWB TR receiver"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure : UWB TR receiver</p>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">UWB TR receiver</p>
 		</div>
 		<div class="col-md-1 col-lg-2"></div>
 		<li style="clear: left;"><b>Localization based on time-of-arrival (TOA)</b> : UWB signals are well suited for time-of-arrival localization, because they provide highly accurate range measurements. However, translating these range measurements to precise positions is nontrivial. We are dealing such systems when real-world limitations are present, such as -
@@ -216,7 +368,7 @@
 	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 		<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/UWB/main/localization_applns-eps-converted-to-1.jpg" alt="Localization based on time-of-arrival (TOA)"></img>
-		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure : Localization based on time-of-arrival (TOA)</p>
+		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Localization based on time-of-arrival (TOA)</p>
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
 	<p style="margin-top: 20px;" class="col-xs-12 col-sm-0 col-md-12 col-lg-12">In the following, we show a few examples of our measurement and modeling results. </p>
@@ -232,7 +384,7 @@
 	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
 	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
 		<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/Wireless_Video/main/D2D_setup-1.jpg" alt="System diagram of D2D system "></img>
-		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure: System diagram of D2D system </p>
+		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">System diagram of D2D system </p>
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
 
@@ -244,7 +396,23 @@
 		<li>Prototyping and testbed construction.</li>
 	</ul> </p>
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> Besides these video-caching oriented networking problems, we also consider issues of joint communication, computation, and caching. WiDeS has developed, in collaboration with Bell Labs, Lyapunov-drift based algorithms for assigning resources at data centers and routing methods for both wired and wireless networks. 
-	</p>
+	</p><br>
+	<div class="row">
+		<div class="col-md-1 col-lg-3"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/Wireless_Video/main/AuI-1.jpg" alt="AuI-1"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">AuI-1<br><br></p>
+		</div>
+		<div class="col-md-1 col-lg-3"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-1 col-lg-3"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/Wireless_Video/main/Helper_setup-1.jpg" alt="Helper_setup-1"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Helper_setup-1<br><br></p>
+		</div>
+		<div class="col-md-1 col-lg-3"></div>
+	</div>
 </div>
 
 
@@ -256,14 +424,14 @@
 		<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
 		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
 			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/Modulation/main/OAM_Principle-1.jpg" alt="Principle of OAM"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure: Principle of OAM </p>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Principle of OAM </p>
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
 		<li style="clear: left;"><b>Orthogonal Time Frequency Space (OTFS) modulation</b> : OTFS is a novel modulation format that can be interpreted as modulating symbols in the delay-Doppler domain (instead of the time-frequency domain). It provides full time- and frequency diversity, and is thus especially well suited for communications in environments with high mobility, where no feedback is possible. But it also shows important advantages in large MIMO systems (better scaling of complexity and/or performance with number of antennas) and internet of things (better power efficiency). We are investigating both fundamental performance and low-complexity practical algorithms.</li>
 		<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
 		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
 			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/Modulation/main/OTFS_principle.png" alt="Principle of OTFS"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure: Principle of OTFS </p>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Principle of OTFS </p>
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
 	</ul><br></p>

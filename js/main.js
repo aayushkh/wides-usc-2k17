@@ -66,11 +66,11 @@ $(document).ready(function(){
   });
 
 	$('#myCarousel').carousel({
-	interval: 1000 * 15
+	interval: 1000 * 20
 	});
 
   $('#newsCarousel').carousel({
-  interval: 1000 * 15
+  interval: 1000 * 20
   });
 
   $(".item div.news-fill, .carousel-control.right, .carousel-control.left").hover(function(){
