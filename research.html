@@ -27,7 +27,9 @@
 		    <span class="icon-bar"></span>
 		    <span class="icon-bar"></span>                        
 	  	</button>
-	  	<span class="hidden-sm"><a class="navbar-brand" href="index.html#WiDeS">WiDeS</a></span>
+	  	<span style="float:left; padding: 11px 11px; margin-right: 30px;"><a href="https://www.usc.edu/"><img height="38" width="180" src="./images/usc-logo.svg"></a></span>
+	  	<span class="wides hidden-sm"><a class="navbar-brand" href="index.html">WiDeS</a></span>
+	  	<span class="wides hidden-lg hidden-xs hidden-md"><a class="navbar-brand" href="index.html">Wireless Devices & Systems Group</a></span>
 	</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 		  	<ul class="nav navbar-nav navbar-right">
@@ -40,7 +42,7 @@
 			    <li><a href="index.html#students">FOR STUDENTS</a></li>
 			    <li><a href="index.html#sponsors">FOR SPONSORS</a></li>
 			    <li class="dropdown">
-					<div onclick="window.location = 'research.html'" class="dropbtn research">RESEARCH</div>
+					<div onclick="window.location = 'index.html#research'" class="dropbtn research">RESEARCH</div>
 					<div class="dropdown-content hidden-xs hidden-sm">
 						<a href="#propChannels">PROPOGATION CHANNELS</a>
 						<a href="#commSysDesign">COMMUNICATION SYSTEMS</a>
@@ -90,12 +92,12 @@
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">A millimeter-wave, real-time MIMO sounder is another key component of our measurement capability, since it allows the dynamic measurement of directional mm-wave characteristics. Compared to the traditional approach of mechanically rotating horn antennas and measuring the impulse response for each horn orientation, our sounder measures a million times faster. This enables the measurement of dynamic directional effects, e.g., how the direction from which the main power comes is changed when a bus is passing by. On the other hand, this also allows to measure in many different locations within a reasonable time (a recent campaign collected 20 million impulse responses in less than a day), thus enabling statistically relevant parameter extraction and modeling. <br><br>
 	The sounder construction is based on the principle of switching beams electronically, instead of using mechanical rotation. The radio frequency units are constructed by Samsung Research America, and the sounder is the result of close collaboration between Samsung and WiDeS. Another key characteristic is the extreme phase stability (hard to achieve at millimeter-wave frequencies), which allows the application of HRPE.  <br><br></p><br>
 	<div class="col-xs-12 col-sm-8 col-md-5 col-lg-5">
-		<img style="height: 500px; justify-content: center;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style=" margin-bottom: 20px;" src="./images/Research/Channels/Building_channel_sounders/mmWave_sounder.jpg" alt="Photo of mm-wave sounder">
-		<p style="text-align: center; clear: left;"><br>Photo of mm-wave sounder<br><br></p>
+		<img style="height: 500px; justify-content: center;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style=" margin-bottom: 20px;" src="./images/Research/Channels/Building_channel_sounders/mmWave_sounder.jpg" alt="Our real-time, multi-beam mm-wave channel sounder">
+		<p style="text-align: center; clear: left;"><br>Our real-time, multi-beam mm-wave channel sounder<br><br></p>
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-		<img style="height: 500px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" src="./images/Research/Channels/Building_channel_sounders/V2V_sounder_array.jpg" alt="Photo of V2V sounder">
-		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><br>Photo of V2V sounder<br><br></p>
+		<img style="height: 500px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" src="./images/Research/Channels/Building_channel_sounders/V2V_sounder_array.jpg" alt="Channel sounder for V2V measurements">
+		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><br>Channel sounder for V2V measurements<br><br></p>
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<p>Yet another sounder we recently built is a MIMO sounder for vehicle-to-vehicle measurements. To make it more robust and flexible, this sounder is based on software-defined radio (SDR) components from National Instruments. WiDeS members programmed the FPGAs, wrote the control software, and added antenna switching capability to create a sounder that can measure 8x8 MIMO channels at 800 MHz and 5.9 GHz, with a 160 MHz bandwidth.<br><br></p>
@@ -137,7 +139,7 @@
 		<div class="col-md-1 col-lg-2"></div>
 		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
 			<img class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Parameter_extraction_methods/clustering_results.jpg" alt="Photo of mm-wave sounder"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><br>Clustering from a recent He paper</p>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><br>Clustering of MPCs based on big-data inspired approach</p>
 		</div>
 		<div class="col-md-1 col-lg-2"></div>
 	</div>
@@ -152,142 +154,114 @@
 		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Double-directional channel model<br><br></p>
 	</div>
 	<div class="col-md-1 col-lg-2"></div>
-	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >Another direction of research revolves around "geometry-based stochastic channel models" (GSCMs). The basic principle is to statistically model the distribution of scatterers in space (by prescribing a probability density function of their location); impulse responses (including double-directional impulse responses) can then be found by a simplified ray tracing procedure that assumes that only single-scattering or double-scattering processes can occur. The origins of GSCMs go back to the 1970s, when a rings of scatterers around the MS was used to compute the effectiveness of diversity antennas at the BS. We were the first to generalize the model to the MIMO case, showing that many of the simplifications of the "diversity-antenna" scenario do not hold for MIMO, and proposing new modeling methods that solved this problem. Our current work focuses on adopting this model to the specific challenges of car-to-car propagation channels.
-	</p>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >Another direction of research revolves around "geometry-based stochastic channel models" (GSCMs). The basic principle is to statistically model the distribution of scatterers in space (by prescribing a probability density function of their location); impulse responses (including double-directional impulse responses) can then be found by a simplified ray tracing procedure that assumes that only single-scattering or double-scattering processes can occur. The origins of GSCMs go back to the 1970s, when a rings of scatterers around the MS was used to compute the effectiveness of diversity antennas at the BS. We were the first to generalize the model to the MIMO case, showing that many of the simplifications of the "diversity-antenna" scenario do not hold for MIMO, and proposing new modeling methods that solved this problem. Our current work focuses on adopting this model to the specific challenges of car-to-car propagation channels.<br><br></p>
 	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
-		<img style="height: 250px; text-align: center;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style=" margin-bottom: 20px;" src="./images/Research/Channels/Channel_modeling/pathloss_simulation_1-1.jpg" alt="Pathloss Simulation-1">
-		<p style="text-align: center; clear: left;"><br>Pathloss Simulation-1<br><br></p>
+		<img style="height: 250px; text-align: center;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style=" margin-bottom: 20px;" src="./images/Research/Channels/Channel_modeling/pathloss_simulation_2-1.jpg" alt="Microcell environment with color-coded streets">
+		<p style="text-align: center; clear: left;"><br>Microcell environment with color-coded streets<br><br></p>
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
-		<img style="height: 250px; justify-content: center;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style=" margin-bottom: 20px;" src="./images/Research/Channels/Channel_modeling/pathloss_simulation_2-1.jpg" alt="Pathloss Simulation-2">
-		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><br>Pathloss Simulation-2<br><br></p>
+		<img style="height: 250px; justify-content: center;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style=" margin-bottom: 20px;" src="./images/Research/Channels/Channel_modeling/pathloss_simulation_1-1.jpg" alt="Pathloss of mm-waves in different streets">
+		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><br>Pathloss of mm-waves in different streets<br><br></p>
 	</div>
 </div>
 
 <div id="mmChannels" class="container-fluid bg-grey just">
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">mm-Wave Channels</h3><br> 
-	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">In the following, we show a few examples of our measurement and modeling results.
-	</p>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> Millimeter-wave communication will be an essential part of 5G cellular communication. Understanding the underlying channel is thus an essential task. While 3GPP has already established a model, it is oversimplified and only suitable for some rough comparisons between different systems, but is not suitable for assessing absolute performance. WiDeS is thus performing extensive measurement and modeling activities in the area, starting from the unique channel sounder we have constructed, to performing first-of-its-kind measurements, to bringing our results into standardization.<br><br></p>
 	<div class="row">
 		<div class="col-md-1 col-lg-2"></div>
 		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
 			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/mm-wave_channels/APS_suburban_mmwave-1.jpg" alt="APS_suburban_mmwave-1"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">APS_suburban_mmwave-1<br><br></p>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure (1)<br><br></p>
 		</div>
 		<div class="col-md-1 col-lg-2"></div>
 	</div>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> Figure (1) shows the power angular spectrum for one of the measurement locations from a microcell measurement campaign for a residential environment. For the same location, the extracted multi-path components in 3-dimensional space are shown in Figure (2). With these measurements, we report models for key channel characteristics, such as path-loss, shadowing, delay spread and angular spread for both LOS and NLOS channels.</p>
 	<div class="row">
-		<div class="col-md-1 col-lg-2"></div>
-		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
-			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/mm-wave_channels/delay_spread_UWB_outdoor-1.jpg" alt="delay_spread_UWB_outdoor-1"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">delay_spread_UWB_outdoor-1<br><br></p>
+		<div class="col-md-1 col-lg-3"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/mm-wave_channels/MPCs_suburban_mmwave-1.jpg" alt="MPCs_suburban_mmwave-1"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure (2)<br><br></p>
 		</div>
-		<div class="col-md-1 col-lg-2"></div>		
+		<div class="col-md-1 col-lg-3"></div>
 	</div>
 	<div class="row">
 		<div class="col-md-1 col-lg-2"></div>
 		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
 			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/mm-wave_channels/dynamic_directional-1.jpg" alt="dynamic_directional-1"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">dynamic_directional-1<br><br></p>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure (3)<br><br></p>
 		</div>
 		<div class="col-md-1 col-lg-2"></div>		
 	</div>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> The unique capabilities of our channel sounder enable measurements to understand temporal dependencies of the mm-wave channels. For mm-wave systems depending on the beamforming gain, these temporal variations, especially the evolution of the angular spectra, are utmost importance while designing efficient beam-discovery and beam-switching algorithms. Figure (3) shows a sample measurement in a time varying channel. In this example, where we observe two main MPCs while the channel is idle; the LOS path and a reflection as shown the figure, then a bus blocks these two dominant paths as it moves along street. The effects of blockage on the mean angles and the angular spreads are also shown in Figure (3).<br><br>Furthermore, Figure (4) shows the PDP from another measurement location in which there are several moving scatterers in the environment. These measurements give insight on omnidirectional and directional delay spread and their evolution as the channel changes.</p>
 	<div class="row">
 		<div class="col-md-1 col-lg-3"></div>
 		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
 			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/mm-wave_channels/mmWave_samplePDP-1.jpg" alt="mmWave_samplePDP-1"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">mmWave_samplePDP-1<br><br></p>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure (4)<br><br></p>
 		</div>
 		<div class="col-md-1 col-lg-3"></div>
 	</div>
 	<div class="row">
-		<div class="col-md-1 col-lg-3"></div>
-		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
-			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/mm-wave_channels/MPCs_suburban_mmwave-1.jpg" alt="MPCs_suburban_mmwave-1"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">MPCs_suburban_mmwave-1<br><br></p>
+		<div class="col-md-1 col-lg-2"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/mm-wave_channels/delay_spread_UWB_outdoor-1.jpg" alt="delay_spread_UWB_outdoor-1"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure (5)<br><br></p>
 		</div>
-		<div class="col-md-1 col-lg-3"></div>
+		<div class="col-md-1 col-lg-2"></div>		
 	</div>
-	<div class="row">
-		<div class="col-md-1 col-lg-3"></div>
-		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
-			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/mm-wave_channels/UWB_environment_warehouse-1.jpg" alt="UWB_environment_warehouse-1"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">UWB_environment_warehouse-1<br><br></p>
-		</div>
-		<div class="col-md-1 col-lg-3"></div>
-	</div>
-	<div class="row">
-		<div class="col-md-1 col-lg-3"></div>
-		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
-			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/mm-wave_channels/UWB_warehouse_PDP-1.jpg" alt="UWB_warehouse_PDP-1"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">UWB_warehouse_PDP-1<br><br></p>
-		</div>
-		<div class="col-md-1 col-lg-3"></div>
-	</div>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">By using an ultra-wideband channel sounder with 15 GHz bandwidth we performed measurements to study the propagation channel characteristics in the 3–18 GHz band and to understand the frequency dependence of the transition of channel characteristics in the region between microwave frequencies and mm-wave frequencies. Figure (5) shows the parameter values for root mean square delay spread statistics for a NLOS UMa scenario. Unlike the common belief, since there is no strong LOS component, all NLOS MPCs experience similar power decay with frequency and hence the RMS delay spreads does not change significantly with frequency.</p>
 </div>
 
 <div id="v2vChannels" class="container-fluid bg-grey just">
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">V2V Channels</h3><br> 
-	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">In the following, we show a few examples of our measurement and modeling results.
-	</p>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">V2V channels will play a critically important role in connected cars and autonomous driving. To ensure the necessary reliability for safety-critical applications, extensive measurements are required as the basis for further system development. WiDeS has been working on this important topic since 2009.<br><br></p>
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/V2V_channels/T2T_Urban_OppoD_Xing.jpg" alt="T2T_Urban_OppoD_Xing"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">T2T_Urban_OppoD_Xing<br><br></p>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Two trucks approach a street intersection in the opposite direction at Downtown Los Angeles for Truck-to-truck (T2T) propagation channel measurements.<br><br></p>
 		</div>
 	</div>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">One recent example of our work is a truck-to-truck MIMO 5.8 GHz propagation channel measurement campaign in Downtown Los Angeles. The figure above shows the scenario when two trucks drive towards each other in the opposite direction in a typical urban environment. Thanks to our real-time V2V channel sounder and the corresponding HRPE algorithm, we are able to extract time-of-arrival, direction of departure, direction of arrival, Doppler shift and signal power for strong discrete multipath components and provide statistics about the diffuse multipath components. <br><br>
+	Below we can see a figure that shows the continuous time-varying receiver angular power spectrum, when the RX truck started with U-turn and drove towards the TX truck. Different from the typical car-to-car propagation channel, the figure suggests that the presence of the trailer, which is higher than the antenna,  provides a strong reflection that is acting as a mirrored component to the line-of-sight path.<br><br></p>
+	<div class="row">
+		<div class="col-md-1 col-lg-3"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/V2V_channels/APS_RX_T2T.jpg" alt="HSR_results-1"></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">The time-varying angular power spectrum at the receiver (RX) when two trucks drive in the opposite direction at Downtown Los Angeles for Truck-to-truck (T2T) propagation channel measurements.<br><br></p>
+		</div>
+		<div class="col-md-1 col-lg-3"></div>
+	</div>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">We also performed measurements on a freeway in Los Angeles. Applying our advanced signal processing algorithms, we could not only identify the directions and delays of the multipath components with high resolution on a snap-shot-by-snapshot basis, but also track the evolution of the MPCs.<br><br></p>
 	<div class="row">
 		<div class="col-md-1 col-lg-2"></div>
 		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
 			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/V2V_channels/t2c_delay_time_trackedpaths.jpg" alt="t2c_delay_time_trackedpaths"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">t2c_delay_time_trackedpaths<br><br></p>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">The time-varying delay of tracked MPCs based on extracted specular paths from the T2C propagation channel measurements conducted on I-110N freeway.<br><br></p>
 		</div>
 		<div class="col-md-1 col-lg-2"></div>		
 	</div>
-	<div class="row">
-		<div class="col-md-1 col-lg-2"></div>
-		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
-			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/V2V_channels/checking_setup-1.jpg" alt="checking_setup-1"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">checking_setup-1<br><br></p>
-		</div>
-		<div class="col-md-1 col-lg-2"></div>		
-	</div>
-	<div class="row">
-		<div class="col-md-1 col-lg-3"></div>
-		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
-			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/V2V_channels/HSR_results-1.jpg" alt="HSR_results-1"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">HSR_results-1<br><br></p>
-		</div>
-		<div class="col-md-1 col-lg-3"></div>
-	</div>
-	<div class="row">
-		<div class="col-md-1 col-lg-3"></div>
-		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
-			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/V2V_channels/HSR_scenario-1.jpg" alt="HSR_scenario-1"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">HSR_scenario-1<br><br></p>
-		</div>
-		<div class="col-md-1 col-lg-3"></div>
-	</div>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">The figure shows the results of a path-tracking algorithm that uses the evaluation results from the HRPE algorithm. These tracked MPCs can be further utilized to parameterize a MIMO geometry-based stochastic channel model.</p>
 </div>
 
 
 <div id="mMIMO" class="container-fluid bg-grey just">
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Massive MIMO and Cloud RAN</h3><br> 
-	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">In the following, we show a few examples of our measurement and modeling results.
-	</p>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">We have done extensive work in the measurement and modeling of propagation channels for large arrays. A typical example is a campaign (jointly with Samsung and TU Ilmenau) in downtown Cologne, Germany, where we measured propagation channels between a 900-element base station (a truly massive array), and mobile stations with 24 antenna elements. Results were evaluated with our high-resolution (RiMax) algorithm, and provided not only the directions and delays of the discrete multipath components, but also, for the first time in urban environments, the parameterization of the diffuse multipath. The discrete multipath were grouped into clusters, and the statistics of those clusters extracted.<br><br></p>
 	<div class="row">
 		<div class="col-md-1 col-lg-3"></div>
 		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
 			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Massive_MIMO/Cologne_results-1.jpg" alt="Cologne_results-1"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Cologne_results-1<br><br></p>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Clustering and propagation mechanisms of multipath components in an urban environment measurement.<br><br></p>
 		</div>
 		<div class="col-md-1 col-lg-3"></div>
 	</div>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">To verify the validity of the results, and to gain further insights into propagation mechanisms, we always check our results against the environmental map. We ensure whether the directions and delays fit plausible propagation paths. In the figure below, we can see various paths over the rooftops of the urban environment, as well as waveguiding through the street canyons.<br><br></p>
 	<div class="row">
 		<div class="col-md-1 col-lg-3"></div>
 		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
 			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Massive_MIMO/Cologne_scenario-1.jpg" alt="Cologne_scenario-1"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Cologne_scenario-1<br><br></p>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Map and propagation mechanisms for a location in the massive MIMO array.<br><br></p>
 		</div>
 		<div class="col-md-1 col-lg-3"></div>
 	</div>
@@ -448,7 +422,7 @@
 		<a href="index.html" title="To Top"><span class="fa fa-arrow-left"></span></a>
   		<p style="font-size: 12px">Back to WiDeS<br><br></p>
 	    <p>
-	    <a class="footerHyperlinks" href="#">Contact Us</a> |
+	    <a class="footerHyperlinks" href="contactus.html">Contact Us</a> |
 	    <a class="footerHyperlinks" href="rulebook.html">Rulebook</a>
 	    </p>
   	</div>

@@ -15,6 +15,13 @@
 	<link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		#map {
+			width: 100%;
+			height: 400px;
+			background-color: grey;
+		}
+	</style>
 </head>
 <body id="top" data-spy="scroll" data-target=".navbar" data-offset="60">
 
@@ -27,12 +34,14 @@
 		    <span class="icon-bar"></span>
 		    <span class="icon-bar"></span>                        
 	  	</button>
-	  	<span class="hidden-sm"><a class="navbar-brand" href="index.html#WiDeS">WiDeS</a></span>
+	  	<span style="float:left; padding: 11px 11px; margin-right: 30px;"><a href="https://www.usc.edu/"><img src="./images/usc-logo.png"></a></span>
+	  	<span class="wides hidden-sm"><a class="navbar-brand" href="index.html">WiDeS</a></span>
+	  	<span class="wides hidden-lg hidden-xs hidden-md"><a class="navbar-brand" href="index.html">Wireless Devices & Systems Group</a></span>
 	</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 		  	<ul class="nav navbar-nav navbar-right">
 			    <li class="dropdown">
-					<div onclick="window.location = 'about.html'" class="dropbtn about">ABOUT</div>
+					<div onclick="window.location = 'index.html#research'" class="dropbtn about">ABOUT</div>
 					<div class="dropdown-content hidden-xs hidden-sm">
 						<a class="news" href="index.html#news">NEWS</a>
 					</div>
@@ -53,6 +62,19 @@
 </nav>
 
 <div id="about" class="container-fluid bg-grey full">
+	<h2 style="margin: 30px auto;">Location</h2>
+	<p>The WiDeS group is located on the University Park Campus just south of Downtown Los Angeles.</p>
+	<p>Hughes Aircraft Electrical Engineering Building (EEB)<br>
+	3740 McClintock Avenue<br>
+	Los Angeles, CA 90089-2560<br></p>
+
+	<div style="margin: 20px 0px;" id="map"></div>
+
+	<p><b>Email contact:</b><br>
+
+	<a class="Hyperlinks" href="founder.html">Prof. Molisch</a> : molisch@usc.edu<br>
+
+	If you contact concerning visiting researcher position or PostDoc, please first read <a class="Hyperlinks" href="students.html#pphds">this.</a></p>
 </div>
 
 <!-- Fixed Image -->
@@ -74,5 +96,21 @@
 	    </p>
 	</div>
 </footer>
+
+<script>
+	function initMap() {
+		var uluru = {lat: 34.019767, lng: -118.289903};
+		var map = new google.maps.Map(document.getElementById('map'), {
+		  zoom: 16,
+		  center: uluru
+		});
+		var marker = new google.maps.Marker({
+		  position: uluru,
+		  map: map
+		});
+	}
+</script>
+<script async defer	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHAYW9VOr331GmIv6hE5legnF1-EjWhr8&callback=initMap"></script>
+
 </body>
 </html>

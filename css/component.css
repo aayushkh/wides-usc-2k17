@@ -1,6 +1,7 @@
 .og-grid {
 	list-style: none;
 	padding: 0px 0px;
+	padding-bottom: 100px;
 	margin: 0 auto;
 	text-align: center;
 	width: 100%;
@@ -74,7 +75,7 @@
 	width: 0;
 	position: absolute;
 	pointer-events: none;
-	border-bottom-color: #A31934;
+	border-bottom-color: #990000;
 	border-width: 15px;
 	left: 50%;
 	margin: -20px 0 0 -15px;
@@ -82,7 +83,7 @@
 
 .og-expander {
 	position: absolute;
-	background: #A31934;
+	background: #990000;
 	top: auto;
 	left: 0;
 	width: 100%;
