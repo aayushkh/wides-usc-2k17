@@ -86,11 +86,15 @@
 
 <div id="channelSounders" class="container-fluid bg-grey just">
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Building Channel Sounders</h3><br> 
-	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">An example of our recent work is an ultrawideband, flexible channel sounder for distributed MIMO measurements. A block diagram is shown below. With a wideband (10 GHz bandwidth) arbitrary waveform generator, we are creating multi-tone sounding signals that are distributed, via an optical switch and radio-over-fiber systems, to 16 transmit antenna arrays, each of which consists of 16 antenna elements. A similar configuration uses 16-element arrays to measure received signals at 16 locations and haul them back to an ultra-high-speed digitizer, from where the signals are stored onto a RAID array for processing. Careful calibration allows extraction of channel properties with high-resolution parameter extraction algorithms (link to the HRPE section). <br><br></p>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		Any scientific investigation has to be based on measurement, so the first step in channel research is the construction of suitable measurement equipment, called “channel sounders”. The principle of channel sounding is simple: you send a known waveform from a transmitter, and the distortions the propagation channel impulses can be concluded from the received waveform. Simple examples of channel sounders are sinewave-generators (allowing for measurement of narrowband attenuation by the channel), pulse generators (for measuring the impulse response) or network analyzers. <br><br>
+		At WiDeS we work on the construction of advanced channel sounders that allow to determine not only time- and frequency characteristics of the channels, but also of directional characteristics. This, in turn, requires transmission and reception of signals at multiple antennas (antenna arrays) at both link ends. By carefully measuring the relationship of the signals at the different antenna elements, we can make conclusions about the directions from which the different signals echoes are arriving at the receiver (and similarly at the transmitter).<br><br>
+		An example of our recent work is an ultrawideband, flexible channel sounder for distributed MIMO measurements. A block diagram is shown below. With a wideband (10 GHz bandwidth) arbitrary waveform generator, we are creating multi-tone sounding signals that are distributed, via an optical switch and radio-over-fiber systems, to 16 transmit antenna arrays, each of which consists of 16 antenna elements. A similar configuration uses 16-element arrays to measure received signals at 16 locations and haul them back to an ultra-high-speed digitizer, from where the signals are stored onto a RAID array for processing. Careful calibration allows extraction of channel properties with high-resolution parameter extraction algorithms (link to the HRPE section). <br><br></p>
 	<img class="col-xs-12 col-sm-12 col-md-12 col-lg-12" src="./images/Research/Channels/Building_channel_sounders/distributed_setup.png" alt="Block diagram of distributed MIMO sounder">
 	<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><br>Block diagram of distributed MIMO sounder<br><br></p>
-	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">A millimeter-wave, real-time MIMO sounder is another key component of our measurement capability, since it allows the dynamic measurement of directional mm-wave characteristics. Compared to the traditional approach of mechanically rotating horn antennas and measuring the impulse response for each horn orientation, our sounder measures a million times faster. This enables the measurement of dynamic directional effects, e.g., how the direction from which the main power comes is changed when a bus is passing by. On the other hand, this also allows to measure in many different locations within a reasonable time (a recent campaign collected 20 million impulse responses in less than a day), thus enabling statistically relevant parameter extraction and modeling. <br><br>
-	The sounder construction is based on the principle of switching beams electronically, instead of using mechanical rotation. The radio frequency units are constructed by Samsung Research America, and the sounder is the result of close collaboration between Samsung and WiDeS. Another key characteristic is the extreme phase stability (hard to achieve at millimeter-wave frequencies), which allows the application of HRPE.  <br><br></p><br>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		A millimeter-wave, real-time MIMO sounder is another key component of our measurement capability, since it allows the dynamic measurement of directional mm-wave characteristics. Compared to the traditional approach of mechanically rotating horn antennas and measuring the impulse response for each horn orientation, our sounder measures a million times faster. This enables the measurement of dynamic directional effects, e.g., how the direction from which the main power comes is changed when a bus is passing by. On the other hand, this also allows to measure in many different locations within a reasonable time (a recent campaign collected 20 million impulse responses in less than a day), thus enabling statistically relevant parameter extraction and modeling. <br><br>
+		The sounder construction is based on the principle of switching beams electronically, instead of using mechanical rotation. The radio frequency units are constructed by Samsung Research America, and the sounder is the result of close collaboration between Samsung and WiDeS. Another key characteristic is the extreme phase stability (hard to achieve at millimeter-wave frequencies), which allows the application of HRPE.  <br><br></p><br>
 	<div class="col-xs-12 col-sm-8 col-md-5 col-lg-5">
 		<img style="height: 500px; justify-content: center;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style=" margin-bottom: 20px;" src="./images/Research/Channels/Building_channel_sounders/mmWave_sounder.jpg" alt="Our real-time, multi-beam mm-wave channel sounder">
 		<p style="text-align: center; clear: left;"><br>Our real-time, multi-beam mm-wave channel sounder<br><br></p>
@@ -115,7 +119,9 @@
 
 <div id="parameterExtraction" class="container-fluid bg-grey just">
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Parameter Extraction Methods</h3><br> 
-	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">HRPEs are based on a parametric model of the wireless propagation channel, namely that the (double-directional) impulse response consists of a sum of multipath components (MPCs), each of which is characterized by its amplitude, delay, and directions at transmitter and receiver. The task of the estimation algorithm is then to find the parameters of the MPCs from the measurement results of the channel sounders. The first class of algorithms we work with are iterative maximum-likelihood estimators, in particular the RiMax algorithm, an improved variant of the popular SAGE algorithm. RiMAX tends to converge significantly faster than SAGE when multiple signals with similar parameters are present, thanks to the implementation of the joint parameter optimization. For estimating the time evolution of channels, a novel HRPE algorithm based on the extended Kalman Filter (EKF) can exploit the correlation between multipath parameters to further improve the estimation accuracy. The algorithm also solves the association problem between MPCs from adjacent snapshots, and the outcome provides the evolution of signals while mobile terminals move.<br><br>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		The result of measurements with channel sounders are impulse responses or transfer functions, from each transmit to each receive antenna element. However, for channel modeling, it is far preferable to know the directions, delays, and amplitudes of the signal echoes - also known as multipath components (MPCs) – of the channel. The simplest such parameter extraction is Fourier analysis, i.e., performing a Fourier transform of the transfer function (to obtain delay) and a spatial Fourier transform of the signals at the antenna elements (to obtain direction). However, the resolution of such extraction is limited by the measurement bandwidth (for delay) and size of the antenna array (for direction), which often is insufficient. At WiDeS, we thus use the much more advanced High Resolution Parameter Extraction (HRPE), which can give an order of magnitude better resolution. We are also performing active research on how to generalize and improve HRPE algorithms. <br><br>
+		HRPEs are based on a parametric model of the wireless propagation channel, namely that the (double-directional) impulse response consists of a sum of multipath components (MPCs), each of which is characterized by its amplitude, delay, and directions at transmitter and receiver. The task of the estimation algorithm is then to find the parameters of the MPCs from the measurement results of the channel sounders. The first class of algorithms we work with are iterative maximum-likelihood estimators, in particular the RiMax algorithm, an improved variant of the popular SAGE algorithm. RiMAX tends to converge significantly faster than SAGE when multiple signals with similar parameters are present, thanks to the implementation of the joint parameter optimization. For estimating the time evolution of channels, a novel HRPE algorithm based on the extended Kalman Filter (EKF) can exploit the correlation between multipath parameters to further improve the estimation accuracy. The algorithm also solves the association problem between MPCs from adjacent snapshots, and the outcome provides the evolution of signals while mobile terminals move.<br><br>
 	</p>
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
@@ -147,14 +153,18 @@
 
 <div id="channelModelling" class="container-fluid bg-grey just">
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Channel Modeling</h3><br> 
-	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">The figure below shows the principle of this model. It represents, essentially, the directions of the MPCs at both transmitter and receiver. While the model is now so widely accepted that this seems almost a matter of course, at the time of its introduction it was a paradigm shift away from the representation of the “transfer function matrix” that described in a MIMO system the transfer function from each transmit to each receive antenna element. Our current research revolves around large-scale variations of the double-directional impulse response, and whether it can be expanded into a finite sum of discrete contributions, or a "diffuse background" should be included.<br><br></p>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		For wireless system design we often need a compact, statistical model that represents the essential channel properties without being tied to a specific location. Development of channel models is thus the last step in the arc that starts with building channel sounders, and continues with performing measurement campaigns and extracting the MPC parameters. WiDeS is working on generic channel modeling structures, and on the parameterization of models based on measurement campaigns. We are also interacting with international standardization bodies such as 3GPP and IEEE 802 to increase usage of our models. Many of the currently used models are based on work of WiDeS members; for example, the double-directional channel modeling approach used for all standardized MIMO models was introduced by WiDeS head Molisch. <br><br>
+		The figure below shows the principle of this model. It represents, essentially, the directions of the MPCs at both transmitter and receiver. While the model is now so widely accepted that this seems almost a matter of course, at the time of its introduction it was a paradigm shift away from the representation of the “transfer function matrix” that described in a MIMO system the transfer function from each transmit to each receive antenna element. Our current research revolves around large-scale variations of the double-directional impulse response, and whether it can be expanded into a finite sum of discrete contributions, or a "diffuse background" should be included.<br><br></p>
 	<div class="col-md-1 col-lg-2"></div>
 	<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
 		<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Channel_modeling/Double_Dir_1.jpg" alt="double-directional channel model"></img>
 		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Double-directional channel model<br><br></p>
 	</div>
 	<div class="col-md-1 col-lg-2"></div>
-	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >Another direction of research revolves around "geometry-based stochastic channel models" (GSCMs). The basic principle is to statistically model the distribution of scatterers in space (by prescribing a probability density function of their location); impulse responses (including double-directional impulse responses) can then be found by a simplified ray tracing procedure that assumes that only single-scattering or double-scattering processes can occur. The origins of GSCMs go back to the 1970s, when a rings of scatterers around the MS was used to compute the effectiveness of diversity antennas at the BS. We were the first to generalize the model to the MIMO case, showing that many of the simplifications of the "diversity-antenna" scenario do not hold for MIMO, and proposing new modeling methods that solved this problem. Our current work focuses on adopting this model to the specific challenges of car-to-car propagation channels.<br><br></p>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+
+		Another direction of research revolves around "geometry-based stochastic channel models" (GSCMs). The basic principle is to statistically model the distribution of scatterers in space (by prescribing a probability density function of their location); impulse responses (including double-directional impulse responses) can then be found by a simplified ray tracing procedure that assumes that only single-scattering or double-scattering processes can occur. The origins of GSCMs go back to the 1970s, when a rings of scatterers around the MS was used to compute the effectiveness of diversity antennas at the BS. We were the first to generalize the model to the MIMO case, showing that many of the simplifications of the "diversity-antenna" scenario do not hold for MIMO, and proposing new modeling methods that solved this problem. Our current work focuses on adopting this model to the specific challenges of car-to-car propagation channels.<br><br></p>
 	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
 		<img style="height: 250px; text-align: center;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style=" margin-bottom: 20px;" src="./images/Research/Channels/Channel_modeling/pathloss_simulation_2-1.jpg" alt="Microcell environment with color-coded streets">
 		<p style="text-align: center; clear: left;"><br>Microcell environment with color-coded streets<br><br></p>
@@ -215,7 +225,10 @@
 
 <div id="v2vChannels" class="container-fluid bg-grey just">
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">V2V Channels</h3><br> 
-	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">V2V channels will play a critically important role in connected cars and autonomous driving. To ensure the necessary reliability for safety-critical applications, extensive measurements are required as the basis for further system development. WiDeS has been working on this important topic since 2009.<br><br></p>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		Communications between vehicles, and between vehicles and infrastructure, are integral parts of modern transportation systems to reduce accidents and improve traffic flow. The US Department of Transportation will mandate capability for 802.11p based communication in all cars manufactured after 2018. To assess how reliable such systems will be, we need to understand the propagation channel between vehicles. WiDeS has been performing extensive measurement campaigns that provides not only field strength, but also directional properties of such channels, and considers effects such as shadowing by trucks. <br><br>
+		A second important transportation environment is high-speed train. While not widespread in the USA, it is a widely used part of infrastructure in Asia and Europe. Communication both by passengers for their entertainment, and by the train equipment for safety-relevant messages, to the base station is important. Understanding the propagation channel is essential to assess reliability and create suitable system design.	<br><br>
+		V2V channels will play a critically important role in connected cars and autonomous driving. To ensure the necessary reliability for safety-critical applications, extensive measurements are required as the basis for further system development. WiDeS has been working on this important topic since 2009.<br><br></p>
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/V2V_channels/T2T_Urban_OppoD_Xing.jpg" alt="T2T_Urban_OppoD_Xing"></img>
@@ -234,12 +247,12 @@
 	</div>
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">We also performed measurements on a freeway in Los Angeles. Applying our advanced signal processing algorithms, we could not only identify the directions and delays of the multipath components with high resolution on a snap-shot-by-snapshot basis, but also track the evolution of the MPCs.<br><br></p>
 	<div class="row">
-		<div class="col-md-1 col-lg-2"></div>
-		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
+		<div class="col-md-2 col-lg-3"></div>
+		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
 			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/V2V_channels/t2c_delay_time_trackedpaths.jpg" alt="t2c_delay_time_trackedpaths"></img>
 			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">The time-varying delay of tracked MPCs based on extracted specular paths from the T2C propagation channel measurements conducted on I-110N freeway.<br><br></p>
 		</div>
-		<div class="col-md-1 col-lg-2"></div>		
+		<div class="col-md-2 col-lg-3"></div>		
 	</div>
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">The figure shows the results of a path-tracking algorithm that uses the evaluation results from the HRPE algorithm. These tracked MPCs can be further utilized to parameterize a MIMO geometry-based stochastic channel model.</p>
 </div>
@@ -247,7 +260,17 @@
 
 <div id="mMIMO" class="container-fluid bg-grey just">
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Massive MIMO and Cloud RAN</h3><br> 
-	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">We have done extensive work in the measurement and modeling of propagation channels for large arrays. A typical example is a campaign (jointly with Samsung and TU Ilmenau) in downtown Cologne, Germany, where we measured propagation channels between a 900-element base station (a truly massive array), and mobile stations with 24 antenna elements. Results were evaluated with our high-resolution (RiMax) algorithm, and provided not only the directions and delays of the discrete multipath components, but also, for the first time in urban environments, the parameterization of the diffuse multipath. The discrete multipath were grouped into clusters, and the statistics of those clusters extracted.<br><br></p>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		The requirement for constantly increasing spectral efficiency has driven the adaptation of base stations with large number of antenna elements, either as concentrated arrays (massive MIMO), or distributed over a larger area, and hauled back with optical fiber to a central processing location (Cloud RAN). Understanding the potential and limitations of those systems requires new channel measurements and modeling, since many of the insights gained with conventional MIMO channel sounders do not hold anymore. At WiDeS, we have built a flexible channel sounder that can measure - 
+		<ul>
+			<li>upto 128 antenna elements at transmitter and receiver, </li>
+			<li>have bandwidth of up to 10 GHz, and/or can measure at any carrier frequency, and with any bandwidth, in the frequency band up to 10 GHz, and </li>
+			<li>can have the antennas concentrated at one location, or distributed at up to 16 different locations.</li>
+		</ul>
+	</p>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		We are performing a variety of measurement campaigns, and create new channel models, as well as perform theoretical investigations to assess the impact of those channel properties on actual system performance.<br><br>
+		We have done extensive work in the measurement and modeling of propagation channels for large arrays. A typical example is a campaign (jointly with Samsung and TU Ilmenau) in downtown Cologne, Germany, where we measured propagation channels between a 900-element base station (a truly massive array), and mobile stations with 24 antenna elements. Results were evaluated with our high-resolution (RiMax) algorithm, and provided not only the directions and delays of the discrete multipath components, but also, for the first time in urban environments, the parameterization of the diffuse multipath. The discrete multipath were grouped into clusters, and the statistics of those clusters extracted.<br><br></p>
 	<div class="row">
 		<div class="col-md-1 col-lg-3"></div>
 		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
@@ -258,19 +281,19 @@
 	</div>
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">To verify the validity of the results, and to gain further insights into propagation mechanisms, we always check our results against the environmental map. We ensure whether the directions and delays fit plausible propagation paths. In the figure below, we can see various paths over the rooftops of the urban environment, as well as waveguiding through the street canyons.<br><br></p>
 	<div class="row">
-		<div class="col-md-1 col-lg-3"></div>
-		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
+		<div class="col-md-2 col-lg-3"></div>
+		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
 			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/Massive_MIMO/Cologne_scenario-1.jpg" alt="Cologne_scenario-1"></img>
 			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Map and propagation mechanisms for a location in the massive MIMO array.<br><br></p>
 		</div>
-		<div class="col-md-1 col-lg-3"></div>
+		<div class="col-md-2 col-lg-3"></div>
 	</div>
 </div>
 
 <div id="commSysDesign" class="container-fluid bg-red">
 	<div class="just">
 	<h1 style="text-align: center;">Communication System Design</h1><br>
-	<p>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	An exciting challenge in wireless system design is the need to merge insights from many different disciplines. From communication theory to networking, optimization theory, to physics, system design requires both broad and deep thinking.<br><br>
 	WiDeS has established itself as a pioneer in a number of select topics, namely MIMO systems (particularly reduced-complexity MIMO transceivers, wireless video distribution, ultrawideband communication and localization, and novel modulation and multiplexing methods (particularly OAM and OTFS). In all of these fields we follow our philosophy of finding innovative approaches that are inspired by practical applications, but grounded in solid theory.
 	</p>
@@ -297,24 +320,34 @@
 
 <div id="MIMOSystems" class="container-fluid bg-grey just">
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">MIMO Systems</h3><br> 
-	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">In the following, we show a few examples of our measurement and modeling results.
-	</p>
-	<div class="row">
-		<div class="col-md-1 col-lg-3"></div>
-		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
-			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/MIMO/main/Fig_optL_illustration.jpg" alt="Fig_optL_illustration"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Fig_optl_illustration<br><br></p>
-		</div>
-		<div class="col-md-1 col-lg-3"></div>
-	</div>
-	<div class="row">
-		<div class="col-md-1 col-lg-3"></div>
-		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
-			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/MIMO/main/HBF-1.jpg" alt="HBF-1"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">HBF-1<br><br></p>
-		</div>
-		<div class="col-md-1 col-lg-3"></div>
-	</div>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		The increase in number of connected devices (IoT) and rising throughput demands have driven wireless systems towards increasing spectral efficiency and exploring higher frequency bands (mm-wave). One such popular technique involves equipping  the  base stations with large number of antenna elements, either as concentrated arrays (MIMO), or distributed over a larger area, and hauled back with optical fiber to a central processing location (Cloud RAN). These techniques are especially beneficial for transmission at the mm-wave frequencies by either reducing the wireless link distance (Cloud RAN) or by enabling large beamforming gains (MIMO). Several open problems exist in the implementation of these techniques, such as reducing the system and algorithmic complexity, improving energy efficiency, reducing cost of transceivers and backhaul infrastructure, channel estimation and resource allocation. We are mainly working on the following aspects:
+		<ul>
+			<li>
+				<b><i>Hybrid beamforming</i></b> : A major challenge in implementing MIMO systems, and specifically massive MIMO systems where concentrated arrays may have 100s of antenna elements, is the hardware cost and energy consumption imposed by having one dedicated RF (up/downconversion) chain for each antenna element. As early as in 2004, WiDeS head Molisch had invented the concept of hybrid beamforming, in which a linear RF beamformer is combined with a small number of RF chains and digital processing. This technology exploits the low cost and energy efficiency of mixed signal RF components to enable cost effective MIMO transceivers. This idea has received great interest in the recent  years, and WiDeS is working on new avenues for such technology such as exploring new architectures for the RF beamformers, designing the beamformers for a multi-user MIMO system in realistic channels and exploring approaches to reduce the training effort required to design the beamformers. Some of our recent work involves appending the RF beamformers with switches for better beam-shaping (Hybrid Beamforming with Selection) and a novel user-centric approach to the beamformer design.<br><br> 
+				<div class="row">
+					<div class="col-md-1 col-lg-3"></div>
+					<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
+						<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/MIMO/main/HBF-1.jpg" alt="HBF-1"></img>
+						<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Hybrid beamforming<br><br></p>
+					</div>
+					<div class="col-md-1 col-lg-3"></div>
+				</div>
+				In some recent work, we investigate systems with both link ends equipped with hybrid beamforming structure. Therefore, individual UEs are able to benefit from both beamforming and spatial multiplexing gains. To alleviate the burden of instantaneous CSI acquisition, we specifically explore the analog beamforming adapted to the second order channel statistics. Consequently, the dimension of the effective channel is reduced from the number of antenna elements to the number of RF chains. We need to deal with two major challenges: 1) four beamforming matrices are coupled together, including analog/digital precoders/combiners; 2) analog beamformers are based on channel statistics, while digital beamformers are based on instantaneous effective CSI. <br><br> We first consider decoupled designs of analog and digital beamforming to reduce the complexity of joint optimization. For fixed analog beamformers, we proposed a virtual sectorization scheme to optimize the digital beamforming based on partial effective CSI feedback. Simulating over real channel profiles from our measurement activities, we demonstrate advantages of the proposed scheme over the state of art method. We also proposed a framework to optimize such beamformers for the mm-wave channel, exploiting its directional characteristics and sparse nature,  to jointly incorporate the interaction between analog and digital beamforming. Furthermore, mindful of the scarce resource elements within a coherence block of mm-wave bandwidths, we also extend the above framework to incorporate the impact of training resource allocation, based on which we propose a user-centric virtual sectorization to maximize the overall network throughput. <br><br>
+			</li>
+			<li>
+				<b><i>Cloud RAN</i></b> : Originally conceived in 2001 as “base station cooperation”, and later known variously as “network MIMO” and “Cooperative Multipoint”, Cloud RANs allow antennas in different locations to form a distributed MIMO system allowing joint coordinated signal transmission, such that all signal energy is useful and no inter-cell interference is created. However, implementations involving full antenna cooperation may require very high capacity backhaul links connecting the antennas, a large channel estimation overhead and computational burden. Therefore, in this interest of making Claud RAN practically viable, WiDeS is working on the theoretical implications of several practical  limitations of Cloud RAN, such as limited backhaul capacities, backhaul link delays, limiting the number of antenna elements that can cooperate (referred to as cooperation cluster), mitigating un-coordinated interference, and minimization of energy consumption. Some of our recent work introduces the concept of interlaced clustering, which can mitigate un-coordinated interference, enabling ‘cell free’ Cloud RAN without a significant increase in implementation cost.<br><br>
+				<div class="row">
+					<div class="col-md-1 col-lg-4"></div>
+					<div class="col-xs-12 col-sm-12 col-md-10 col-lg-4">
+						<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/MIMO/main/CloudRAN.jpg" alt="HBF-1"></img>
+						<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Cloud RAN<br><br></p>
+					</div>
+					<div class="col-md-1 col-lg-4"></div>
+				</div>
+			</li>
+		</ul>
+	</p>	
 </div>
 
 <div id="UWBComm" class="container-fluid bg-grey just">
