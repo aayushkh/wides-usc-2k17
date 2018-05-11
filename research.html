@@ -213,12 +213,12 @@
 		<div class="col-md-1 col-lg-3"></div>
 	</div>
 	<div class="row">
-		<div class="col-md-1 col-lg-2"></div>
-		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
+		<div class="col-md-2 col-lg-3"></div>
+		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
 			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Channels/mm-wave_channels/delay_spread_UWB_outdoor-1.jpg" alt="delay_spread_UWB_outdoor-1"></img>
 			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Figure (5)<br><br></p>
 		</div>
-		<div class="col-md-1 col-lg-2"></div>		
+		<div class="col-md-2 col-lg-3"></div>		
 	</div>
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">By using an ultra-wideband channel sounder with 15 GHz bandwidth we performed measurements to study the propagation channel characteristics in the 3–18 GHz band and to understand the frequency dependence of the transition of channel characteristics in the region between microwave frequencies and mm-wave frequencies. Figure (5) shows the parameter values for root mean square delay spread statistics for a NLOS UMa scenario. Unlike the common belief, since there is no strong LOS component, all NLOS MPCs experience similar power decay with frequency and hence the RMS delay spreads does not change significantly with frequency.</p>
 </div>
@@ -338,12 +338,12 @@
 			<li>
 				<b><i>Cloud RAN</i></b> : Originally conceived in 2001 as “base station cooperation”, and later known variously as “network MIMO” and “Cooperative Multipoint”, Cloud RANs allow antennas in different locations to form a distributed MIMO system allowing joint coordinated signal transmission, such that all signal energy is useful and no inter-cell interference is created. However, implementations involving full antenna cooperation may require very high capacity backhaul links connecting the antennas, a large channel estimation overhead and computational burden. Therefore, in this interest of making Claud RAN practically viable, WiDeS is working on the theoretical implications of several practical  limitations of Cloud RAN, such as limited backhaul capacities, backhaul link delays, limiting the number of antenna elements that can cooperate (referred to as cooperation cluster), mitigating un-coordinated interference, and minimization of energy consumption. Some of our recent work introduces the concept of interlaced clustering, which can mitigate un-coordinated interference, enabling ‘cell free’ Cloud RAN without a significant increase in implementation cost.<br><br>
 				<div class="row">
-					<div class="col-md-1 col-lg-4"></div>
-					<div class="col-xs-12 col-sm-12 col-md-10 col-lg-4">
+					<div class="col-sm-2 col-md-3 col-lg-4"></div>
+					<div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
 						<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/MIMO/main/CloudRAN.jpg" alt="HBF-1"></img>
 						<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Cloud RAN<br><br></p>
 					</div>
-					<div class="col-md-1 col-lg-4"></div>
+					<div class="col-md-2 col-md-3 col-lg-4"></div>
 				</div>
 			</li>
 		</ul>
@@ -353,79 +353,140 @@
 <div id="UWBComm" class="container-fluid bg-grey just">
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Ultrawideband Communication and Localization</h3><br> 
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	Ultrawideband (UWB) communications systems are commonly defined as systems with large absolute and/or large relative bandwidth. Such a large bandwidth offers specific advantages with respect to signal robustness, information transfer speed, and/or localization accuracy, but leads also to fundamental differences from conventional, narrowband, systems. 
+	In working on UWB, WiDeS is following in the footsteps of USC professor Bob Scholtz, the pioneer of UWB communications. Our current main areas of interest are:
 	<ul>
-		<li ><b>Design of low-complexity UWB transceivers</b> : transmitted-reference transceivers allow the demodulation of UWB signals without the construction of coherent receivers (which often would be expensive and energy-consuming because of the large bandwidth and associated high sampling rate of the receivers. We are developing and prototyping a variety of low-complexity implementations. We furthermore investigate the use of extreme UWB spreading (10 GHz bandwidth) for jammer suppression.<br><br>
-		<div class="col-md-1 col-lg-2"></div>
-		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
-			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/UWB/main/quals_example_network.png" alt="UWB TR receiver"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">UWB TR receiver</p>
+		<li ><b>Design of low-complexity UWB transceivers</b> : The large system bandwidth of UWB may help resolve hundreds of channel scatterers which, while advantageous as previously discussed, also increases complexity of the receiver design. In coherent UWB receivers, a large number of Rake fingers maybe required to exploit the power received from these scatterers. WiDeS has over the years designed several low complexity receiver designs, that can significantly reduce the hardware cost of coherent UWB receivers. Our current work explores the limitations and benefits of such low complexity designs. We also leverage the ‘duality’ between UWB and MIMO transmission to enable new insight and new designs for either technologies. One recent award-winning paper introduces a new RAKE receiver - JS-Rake, that accounts for the channel estimation overhead of low complexity RAKE receivers to improve performance. Another popular receiver design for UWB is the transmitted-reference receiver that allows the demodulation of UWB signals without channel estimation and without the construction of coherent receivers (which often would be expensive and energy-consuming because of the large bandwidth and associated high sampling rate of the receivers). We are developing and prototyping a variety of such transmit reference implementations, with focus on improving throughputs, reducing noise accumulation and multi-user access. One recent prototype involves a new architecture for frequency shifted reference receivers that allows transmission of higher order modulation formats such as quadrature amplitude modulation. We furthermore investigate the use of extreme UWB spreading (10 GHz bandwidth) for jammer suppression.<br><br>
+		<div class="row">
+			<div class="col-md-2 col-lg-3"></div>
+			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
+				<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/UWB/main/Testing.jpg" alt="Testing the JS-Rake system design on the UWB testbed."></img>
+				<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Testing the JS-Rake system design on the UWB testbed.</p>
+			</div>
+			<div class="col-md-2 col-lg-3"></div>
+		</div><br>
+		<div class="row">
+			<div class="col-md-2 col-lg-3"></div>
+			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
+				<img justify-content: center;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style=" margin-bottom: 20px;" src="./images/Research/Systems/UWB/main/frequency_shift.jpg" alt="Frequency shift reference transmitter structure (Optional)">
+				<p style="text-align: center; clear: left;"><br>Frequency shift reference transmitter structure (Optional)<br><br></p>
+			</div>
+			<div class="col-md-2 col-lg-3"></div>
+		</div><br>
+		<div class="row">
+			<div class="col-md-2 col-lg-3"></div>
+			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
+				<img class="col-xs-12 col-sm-12 col-md-12 col-lg-12" src="./images/Research/Systems/UWB/main/qam_frequency_shift.jpg" alt="QAM capable multi-differential Frequency shift reference UWB receiver.">
+				<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><br>QAM capable multi-differential Frequency shift reference UWB receiver.<br><br></p>
+			</div>
+			<div class="col-md-2 col-lg-3"></div>
+		</div><br>
+		<li style="clear: left;"><b>Localization based on time-of-arrival (TOA)</b> : 
+		Localization is a critical task in many wireless systems, essential for applications such as emergency response, and location-based services. While outdoor localization often works very well, thanks to GPS, the same does not hold for indoor environments or even densely built up urban areas such as street canyons. In those cases, alternative methods such as those based on UWB offer an attractive alternative.<br><br><br>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/UWB/main/localization_applns-eps-converted-to-1.jpg" alt="Localization based on time-of-arrival (TOA)"></img>
+				<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Localization based on time-of-arrival (TOA)</p>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
 		</div>
-		<div class="col-md-1 col-lg-2"></div>
-		<li style="clear: left;"><b>Localization based on time-of-arrival (TOA)</b> : UWB signals are well suited for time-of-arrival localization, because they provide highly accurate range measurements. However, translating these range measurements to precise positions is nontrivial. We are dealing such systems when real-world limitations are present, such as -
+		UWB signals are well suited for time-of-arrival localization, because they provide highly accurate range measurements. However, translating these range measurements to precise positions is nontrivial. We are dealing such systems when real-world limitations are present, such as -
 		<ol>
 			<li> Interference from other (active) users</li>
 			<li> Multipath.</li>
 			<li> Blocking of the line-of-sight for some of the ranging measurements </li>
 			<li> Multi-target problems in passive localization, i.e., several targets with similar radar signature are present at different locations</li>
 		</ol>
-		Such practical limitations lead to challenging fundamental new limitations that we have been exploring for a number of years, and from which in turn we derive practical algorithms whose performance can approach those limits.<br><br>
+		Such practical constraints lead to challenging fundamental new limitations that we have been exploring for many years, and from which, in turn, we derive practical algorithms whose performance can approach those limits.<br><br>
 		</li>
 	</ul><br>
-	</p>
-	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
-	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-		<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/UWB/main/localization_applns-eps-converted-to-1.jpg" alt="Localization based on time-of-arrival (TOA)"></img>
-		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Localization based on time-of-arrival (TOA)</p>
+	<div class="row">
+		<div class="col-md-1 col-lg-2"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/UWB/main/quals_example_network.png" alt="Testing the JS-Rake system design on the UWB testbed."></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Challenge in localization in indoor environments.</p>
+		</div>
+		<div class="col-md-1 col-lg-2"></div>
 	</div>
-	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
-	<p style="margin-top: 20px;" class="col-xs-12 col-sm-0 col-md-12 col-lg-12">In the following, we show a few examples of our measurement and modeling results. </p>
+	</p>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	At WiDeS, our research has contributed to the following breakthroughs:
+	<ol>
+		<li>The suppressing of interference using time-hopping transmissions (i.e., the time-domain equivalent of spread-spectrum techniques).</li>
+		<li>Passive multi-target localization algorithms that are blocking and multipath aware.</li>
+		<li>Design and performance analysis of localization networks using stochastic geometry tools for modeling environment realizations. </li>
+	</ol>
+	</p>
 </div>
 
 <div id="WirelessVidDist" class="container-fluid bg-grey just">
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Wireless Video Distribution</h3><br> 
-	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Our new architecture rests on two pillars -
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	The majority of wireless internet traffic is driven by video-on-demand, such as Netflix, Amazon Prime, and Hulu. Video is characterized by a unique feature: many different people want to watch the same videos, though at different times. WiDeS has pioneered since 2011 system architectures that make special use of these properties to turn memory into bandwidth. This can be used to improve video throughput by orders of magnitude without the need for expensive densification of basestation with backhaul. Rather, our new architecture rests on two pillars - 
 	<ul>
 		<li><b>Femtocaching</b>, where a small base station without backhaul link, but with a large cache, stores popular files, and transmits them upon demand to the users. Since those stations do not need backhaul, they are extremely cheap to deploy, and since they can be placed with high density, result in high spectral efficiency.</li>
 		<li><b>Caching on devices together with device-to-device communications</b>: The concept of femtocaching can be pushed further by caching video files on the user devices themselves – while the caches would not be large enough to store all the videos a particular person might want to watch, the aggregate cache of the users in a particular area is large enough. Then, a user can get a required file via spectrally efficient D2D communication from another device, without having to go via the base station.</li>
 	</ul> <br></p>
-	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
-	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
-		<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/Wireless_Video/main/D2D_setup-1.jpg" alt="System diagram of D2D system "></img>
-		<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">System diagram of D2D system </p>
-	</div>
-	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
-
-	<p style="clear: left; margin-left: 15px;" >At WiDeS, we are working at many aspects of such a system, including - 
+	<p style="clear: left; margin-left: 15px;" >
+	The WiDeS group is a pioneer of wireless video distribution. We invented (in collaboration with our USC colleagues Prof. Caire and Prof. Dimakis) both the concept of femtocaching, and caching combined with device-to-device communications. Both of these approaches can improve video throughput by orders of magnitude, by converting storage into bandwidth. These concepts have been taken up by groups all over the world and are now elaborated in hundreds of papers. At WiDeS, we are working at many aspects of such a system, including - 
 	<ul>
 		<li>Fundamental, information-theoretic limits on throughput, energy efficiency, and latency.</li>
 		<li>Experimental investigation of popularity distributions and their spatio-temporal concentration, as well as machine-learning based algorithms for prediction.</li>
 		<li>Algorithms for caching and assignment of caches to users for downloading.</li>
 		<li>Prototyping and testbed construction.</li>
-	</ul> </p>
-	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> Besides these video-caching oriented networking problems, we also consider issues of joint communication, computation, and caching. WiDeS has developed, in collaboration with Bell Labs, Lyapunov-drift based algorithms for assigning resources at data centers and routing methods for both wired and wireless networks. 
-	</p><br>
+	</ul> 
+	</p>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> Besides these video-caching oriented networking problems, we also consider issues of joint communication, computation, and caching. WiDeS has developed, in collaboration with Bell Labs, Lyapunov-drift based algorithms for assigning resources at data centers and routing methods for both wired and wireless networks.<br><br>
+	</p>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<b>Fundamentals of Wireless  Caching</b><br><br>
+		We work on the fundamentals of wireless caching networks, including the information-theoretic limits, analytical expressions, optimality, and trade-offs for throughput, outage probability, energy efficiency, and delay latency. 
+	</p>
 	<div class="row">
 		<div class="col-md-1 col-lg-3"></div>
 		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
-			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/Wireless_Video/main/AuI-1.jpg" alt="AuI-1"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">AuI-1<br><br></p>
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/Wireless_Video/main/outage_probability.jpg" alt="D2D caching has orders of magnitude better tradeoff of throughput versus outage probability than other video distribution schemes."></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">D2D caching has orders of magnitude better tradeoff of throughput versus outage probability than other video distribution schemes. <br><br></p>
 		</div>
 		<div class="col-md-1 col-lg-3"></div>
 	</div>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		We also explore the interactions between between BS-, D2D-, and self-caching and impacts of different fundamental system parameters, such as memory size and cooperation distance. In the figure below, we show the existence of trade-off between throughput and energy efficiency.
+	</p>
 	<div class="row">
 		<div class="col-md-1 col-lg-3"></div>
 		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
-			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/Wireless_Video/main/Helper_setup-1.jpg" alt="Helper_setup-1"></img>
-			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Helper_setup-1<br><br></p>
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/Wireless_Video/main/tradeoff.jpg" alt="Tradeoff between energy efficiency and throughput in D2D video caching with self-caching."></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Tradeoff between energy efficiency and throughput in D2D video caching with self-caching. <br><br></p>
 		</div>
 		<div class="col-md-1 col-lg-3"></div>
 	</div>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<b>Experimental investigation of popularity distributions</b><br><br>
+		The effectiveness of both femtocaching and D2D-based caching depends critically on the popularity concentration, i.e., that a small number of popular video files account for a large part of video traffic.  Since the popularity distribution modeling is meaningful only if it is based on real-world data, we investigate the dataset from real-world data. In the cooperation with Prof. Sastry from King’s College London, we work on comprehensively understanding and modeling for statistics of both individual user preference probabilities and global popularity distribution based on hundreds of millions of data from the BBC iPlayer system. We have developed a framework with hierarchical structure for modeling and showed that important statistics can be modeled under the framework. <br>
+		In addition, we also work on the machine-learning based algorithm for enhancing prediction and system design.<br><br> 
+	</p>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<b>Algorithms for caching</b><br><br>
+		We work on the algorithms and designs for effective caching and resource assignments in wireless caching networks. According to the scenarios and applications, we investigate  different types of caching approaches and policies in consideration of both homogeneous  and heterogeneous popularity distribution models; one example is shown below. Based on the analytical expressions and trade-off investigations, we design algorithms to provide the best trade-off between different aspects. 
+	</p>
+	<div class="row">
+		<div class="col-md-1 col-lg-3"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
+			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/Wireless_Video/main/comparisions.jpg" alt="EE comparisons between different caching policies in the system with γ = 1.3, S = 10, and  λu  = 1000 km−2."></img>
+			<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">EE comparisons between different caching policies in the system with γ = 1.3, S = 10, and  λu  = 1000 km^−2.<br><br></p>
+		</div>
+		<div class="col-md-1 col-lg-3"></div>
+	</div>
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 </div>
 
 
 <div id="NovelModMux" class="container-fluid bg-grey just">
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Novel Modulation and Multiplexing Methods</h3><br> 
-	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">We investigate novel approaches, such as -
+	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	While MIMO-OFDM has become the standard data transmission approach, the development of novel modulation and multiplexing methods is not standing still. While it was shown, e.g., that OFDM is the optimum transmission method for frequency-selective method under certain assumptions, not all these assumptions need be satisfied in practical situations. Similarly, spatial multiplexing may become challenging in the presence of certain hardware limitations. We thus investigate novel approaches, such as -
 	<ul>
 		<li><b>Orbital Angular Momentum (OAM) multiplexing</b> : OAM can be interpreted as a “phase twist” imposed on a wave propagating down the axis. Different OAM “modes” with different phase twists (but propagating down the same axis) are orthogonal to each other, and thus can carry different data streams. This feature is especially useful for line-of-sight links that need to carry several Gbit/s. A key advantage of OAM modes is that they can be separate by analog components, thus obviating the need for spatial equalizers operating at ultra-high computational speeds. In collaboration with Prof. Alan Willner (link), the pioneer of OAM, we have worked on theory and prototyping of OAM in the mm-wave regime, and – inter alia – demonstrated 32 GBit/s transmission in the 28 GHz band.</li><br>
 		<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
