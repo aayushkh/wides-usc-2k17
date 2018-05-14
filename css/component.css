@@ -233,11 +233,10 @@
 	.og-expander p { font-size: 13px; }
 	.og-expander a { font-size: 12px; }
 	.og-details { margin: 0px 10px;}
-	.og-grid li { margin: 0px 0px;	height: 120px;}
+	.og-grid li { height: 200px;}
 	.og-grid li > a div p {	font-size: 20px;}
-	.og-grid li > a div { width: 300px;	height: 100px;}
+	.og-grid li > a div { width: 300px;	height: 180px;}
 	.og-grid li > a div p.header {	font-size: 28px; }
-	.og-grid li > a .heading { height: 100px;}
 
 }
 
@@ -250,8 +249,10 @@
 	.og-expander h3 { font-size: 16px !important; text-align: left; display: none;}
 	.og-expander p { font-size: 13px; }
 	.og-expander a { font-size: 12px; }
+	.og-grid li { height: 200px;}
 	.og-grid li > a div p {	font-size: 18px;}
-	.og-grid li > a div {width: 300px;	height: 100px;}
-	.og-grid li > a div p.header {	font-size: 26px; }
-
+	.og-grid li > a div {margin-top: 200px; width: 300px;	height: 180px;}
+	.og-grid li > a div p.header { font-size: 26px; }
+	.og-grid li > a .heading.one {margin-top: -80px;}
+	.og-grid li > a .heading.two {margin-top: 200px;}
 }

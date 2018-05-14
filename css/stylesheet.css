@@ -537,7 +537,7 @@ a.footerHyperlinks:hover {
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
-	padding: 140px 100px;
+	padding: 120px 100px;
   	font-size: 22px !important;
   	line-height: 1.6 !important;
   	letter-spacing: 3px;
@@ -702,14 +702,43 @@ a.Hyperlinks:hover {
   	font-weight: bold;
 }
 
-
-
+/* -- For Media-Width < 992px -- */
+@media screen and (max-width: 992px) {
+	.container-fluid {
+		padding: 120px 100px;	
+	}
+	.container-fluid {
+		padding: 120px 80px 80px 80px;	
+	}
+	.element {
+		cursor: pointer;
+	  	margin: 0;
+		padding: 80px 40px;
+	  	border: 0;
+	  	font-size: 18px !important;
+	  	line-height: 1.6 !important;
+	  	letter-spacing: 5px;
+	  	font-family: Lato, sans-serif;
+	  	font-style: italic;
+	}
+}
 
 
 /* -- For Media-Width < 768px -- */
 @media screen and (max-width: 768px) {
 	h6 {
 		font-size: 28px !important;
+	}
+	.element {
+		cursor: pointer;
+	  	margin: 0;
+		padding: 80px 100px;
+	  	border: 0;
+	  	font-size: 18px !important;
+	  	line-height: 1.6 !important;
+	  	letter-spacing: 5px;
+	  	font-family: Lato, sans-serif;
+	  	font-style: italic;
 	}
 	.grid.propChannels {
 		padding: 20px 100px;
