@@ -801,6 +801,9 @@ a.Hyperlinks:hover {
 	h6 {
 		font-size: 24px !important;
 	}
+	ul {
+	    padding: 20px;
+	}
 	.container-fluid {
 		padding: 40px 20px 0px 20px;	
 	}
