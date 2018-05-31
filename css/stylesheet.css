@@ -419,7 +419,6 @@ a:hover {
 	max-width: 300px;
     width: 100%;
     height: 400px;
-    background-color: #990000;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 
     transform-style: preserve-3d;
@@ -440,7 +439,9 @@ a:hover {
 .flip .card .front {
 	transform: rotateX(0deg);
    	position: absolute;
-   	width: 100%;
+	background-color: #990000;
+	width: 100%;
+	height: inherit;
    	z-index: 1;
 }
 .flip .card img {
@@ -452,6 +453,7 @@ a:hover {
 .flip .card .back {
 	color: #FFFFFF;
 
+    background-color: #990000;
 	transform: rotatey(180deg);
 	-webkit-transform: rotatey(180deg);
 	-moz-transform: rotatey(180deg);
@@ -881,4 +883,3 @@ a.Hyperlinks:hover {
 	    font-size: 17px;
 	}
 }
-

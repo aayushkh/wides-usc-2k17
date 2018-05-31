@@ -28,8 +28,8 @@
 		    <span class="icon-bar"></span>                        
 	  	</button>
 	  	<span style="float:left; padding: 11px 11px; margin-right: 30px;"><a href="https://www.usc.edu/"><img height="38" width="180" src="./images/usc-logo.svg"></a></span>
-	  	<span class="wides hidden-sm"><a class="navbar-brand" href="index.html">WiDeS</a></span>
-	  	<span class="wides hidden-lg hidden-xs hidden-md"><a class="navbar-brand" href="index.html">Wireless Devices & Systems Group</a></span>
+	  	<span style="float: right;" class="wides hidden-sm"><a class="navbar-brand" href="index.html">WiDeS</a></span>
+	  	<span style="float: right;" class="wides hidden-lg hidden-xs hidden-md"><a class="navbar-brand" href="index.html">Wireless Devices & Systems Group</a></span>
 	</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 		  	<ul class="nav navbar-nav navbar-right">
@@ -134,11 +134,11 @@
 		</div>
 	</div>
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	Our main research in this field is -
-	<ul>
+	Our main research in this field is -</p>
+	<ul style="clear: left;">
 		<li>Incorporating effects that have been neglected in previous, simplified, models, such as polarization, diffuse background radiation, change of antenna characteristics with bandwidth, and interdependency between delay and phase of the MPCs.</li>
 		<li>Acceleration of the computations: since running an unoptimized maximum-likelihood estimator for a single snapshot (taken within a few ms) can take hours even on a fast computer, it is essential to find high-speed computation methods. Our work has already led to order-of-magnitude improvement in runtime, and we are continuing to find new methods to improve efficiency.</li>
-	</ul><br></p>
+	</ul><br>
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Besides extracting the parameters of the MPCs, it is also important to identify “clusters”, ie., groups of MPCs that have similar characteristics and behavior. We are working with algorithms from big-data processing and machine learning (such as variations of the K-means algorithm or density-based kernel algorithms.) <br><br>
 	</p>
 	<div class="row">
@@ -262,12 +262,12 @@
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Massive MIMO and Cloud RAN</h3><br> 
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		The requirement for constantly increasing spectral efficiency has driven the adaptation of base stations with large number of antenna elements, either as concentrated arrays (massive MIMO), or distributed over a larger area, and hauled back with optical fiber to a central processing location (Cloud RAN). Understanding the potential and limitations of those systems requires new channel measurements and modeling, since many of the insights gained with conventional MIMO channel sounders do not hold anymore. At WiDeS, we have built a flexible channel sounder that can measure - 
-		<ul>
-			<li>upto 128 antenna elements at transmitter and receiver, </li>
-			<li>have bandwidth of up to 10 GHz, and/or can measure at any carrier frequency, and with any bandwidth, in the frequency band up to 10 GHz, and </li>
-			<li>can have the antennas concentrated at one location, or distributed at up to 16 different locations.</li>
-		</ul>
 	</p>
+	<ul style="clear: left;">
+		<li>upto 128 antenna elements at transmitter and receiver, </li>
+		<li>have bandwidth of up to 10 GHz, and/or can measure at any carrier frequency, and with any bandwidth, in the frequency band up to 10 GHz, and </li>
+		<li>can have the antennas concentrated at one location, or distributed at up to 16 different locations.</li>
+	</ul>
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		We are performing a variety of measurement campaigns, and create new channel models, as well as perform theoretical investigations to assess the impact of those channel properties on actual system performance.<br><br>
 		We have done extensive work in the measurement and modeling of propagation channels for large arrays. A typical example is a campaign (jointly with Samsung and TU Ilmenau) in downtown Cologne, Germany, where we measured propagation channels between a 900-element base station (a truly massive array), and mobile stations with 24 antenna elements. Results were evaluated with our high-resolution (RiMax) algorithm, and provided not only the directions and delays of the discrete multipath components, but also, for the first time in urban environments, the parameterization of the diffuse multipath. The discrete multipath were grouped into clusters, and the statistics of those clusters extracted.<br><br></p>
@@ -322,32 +322,32 @@
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">MIMO Systems</h3><br> 
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		The increase in number of connected devices (IoT) and rising throughput demands have driven wireless systems towards increasing spectral efficiency and exploring higher frequency bands (mm-wave). One such popular technique involves equipping  the  base stations with large number of antenna elements, either as concentrated arrays (MIMO), or distributed over a larger area, and hauled back with optical fiber to a central processing location (Cloud RAN). These techniques are especially beneficial for transmission at the mm-wave frequencies by either reducing the wireless link distance (Cloud RAN) or by enabling large beamforming gains (MIMO). Several open problems exist in the implementation of these techniques, such as reducing the system and algorithmic complexity, improving energy efficiency, reducing cost of transceivers and backhaul infrastructure, channel estimation and resource allocation. We are mainly working on the following aspects:
-		<ul>
-			<li>
-				<b><i>Hybrid beamforming</i></b> : A major challenge in implementing MIMO systems, and specifically massive MIMO systems where concentrated arrays may have 100s of antenna elements, is the hardware cost and energy consumption imposed by having one dedicated RF (up/downconversion) chain for each antenna element. As early as in 2004, WiDeS head Molisch had invented the concept of hybrid beamforming, in which a linear RF beamformer is combined with a small number of RF chains and digital processing. This technology exploits the low cost and energy efficiency of mixed signal RF components to enable cost effective MIMO transceivers. This idea has received great interest in the recent  years, and WiDeS is working on new avenues for such technology such as exploring new architectures for the RF beamformers, designing the beamformers for a multi-user MIMO system in realistic channels and exploring approaches to reduce the training effort required to design the beamformers. Some of our recent work involves appending the RF beamformers with switches for better beam-shaping (Hybrid Beamforming with Selection) and a novel user-centric approach to the beamformer design.<br><br> 
-				<div class="row">
-					<div class="col-md-1 col-lg-3"></div>
-					<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
-						<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/MIMO/main/HBF-1.jpg" alt="HBF-1"></img>
-						<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Hybrid beamforming<br><br></p>
-					</div>
-					<div class="col-md-1 col-lg-3"></div>
-				</div>
-				In some recent work, we investigate systems with both link ends equipped with hybrid beamforming structure. Therefore, individual UEs are able to benefit from both beamforming and spatial multiplexing gains. To alleviate the burden of instantaneous CSI acquisition, we specifically explore the analog beamforming adapted to the second order channel statistics. Consequently, the dimension of the effective channel is reduced from the number of antenna elements to the number of RF chains. We need to deal with two major challenges: 1) four beamforming matrices are coupled together, including analog/digital precoders/combiners; 2) analog beamformers are based on channel statistics, while digital beamformers are based on instantaneous effective CSI. <br><br> We first consider decoupled designs of analog and digital beamforming to reduce the complexity of joint optimization. For fixed analog beamformers, we proposed a virtual sectorization scheme to optimize the digital beamforming based on partial effective CSI feedback. Simulating over real channel profiles from our measurement activities, we demonstrate advantages of the proposed scheme over the state of art method. We also proposed a framework to optimize such beamformers for the mm-wave channel, exploiting its directional characteristics and sparse nature,  to jointly incorporate the interaction between analog and digital beamforming. Furthermore, mindful of the scarce resource elements within a coherence block of mm-wave bandwidths, we also extend the above framework to incorporate the impact of training resource allocation, based on which we propose a user-centric virtual sectorization to maximize the overall network throughput. <br><br>
-			</li>
-			<li>
-				<b><i>Cloud RAN</i></b> : Originally conceived in 2001 as “base station cooperation”, and later known variously as “network MIMO” and “Cooperative Multipoint”, Cloud RANs allow antennas in different locations to form a distributed MIMO system allowing joint coordinated signal transmission, such that all signal energy is useful and no inter-cell interference is created. However, implementations involving full antenna cooperation may require very high capacity backhaul links connecting the antennas, a large channel estimation overhead and computational burden. Therefore, in this interest of making Claud RAN practically viable, WiDeS is working on the theoretical implications of several practical  limitations of Cloud RAN, such as limited backhaul capacities, backhaul link delays, limiting the number of antenna elements that can cooperate (referred to as cooperation cluster), mitigating un-coordinated interference, and minimization of energy consumption. Some of our recent work introduces the concept of interlaced clustering, which can mitigate un-coordinated interference, enabling ‘cell free’ Cloud RAN without a significant increase in implementation cost.<br><br>
-				<div class="row">
-					<div class="col-sm-2 col-md-3 col-lg-4"></div>
-					<div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
-						<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/MIMO/main/CloudRAN.jpg" alt="HBF-1"></img>
-						<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Cloud RAN<br><br></p>
-					</div>
-					<div class="col-md-2 col-md-3 col-lg-4"></div>
-				</div>
-			</li>
-		</ul>
 	</p>	
+	<ul style="clear: left">
+		<li>
+			<b><i>Hybrid beamforming</i></b> : A major challenge in implementing MIMO systems, and specifically massive MIMO systems where concentrated arrays may have 100s of antenna elements, is the hardware cost and energy consumption imposed by having one dedicated RF (up/downconversion) chain for each antenna element. As early as in 2004, WiDeS head Molisch had invented the concept of hybrid beamforming, in which a linear RF beamformer is combined with a small number of RF chains and digital processing. This technology exploits the low cost and energy efficiency of mixed signal RF components to enable cost effective MIMO transceivers. This idea has received great interest in the recent  years, and WiDeS is working on new avenues for such technology such as exploring new architectures for the RF beamformers, designing the beamformers for a multi-user MIMO system in realistic channels and exploring approaches to reduce the training effort required to design the beamformers. Some of our recent work involves appending the RF beamformers with switches for better beam-shaping (Hybrid Beamforming with Selection) and a novel user-centric approach to the beamformer design.<br><br> 
+			<div class="row">
+				<div class="col-md-1 col-lg-3"></div>
+				<div class="col-xs-12 col-sm-12 col-md-10 col-lg-6">
+					<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/MIMO/main/HBF-1.jpg" alt="HBF-1"></img>
+					<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Hybrid beamforming<br><br></p>
+				</div>
+				<div class="col-md-1 col-lg-3"></div>
+			</div>
+			In some recent work, we investigate systems with both link ends equipped with hybrid beamforming structure. Therefore, individual UEs are able to benefit from both beamforming and spatial multiplexing gains. To alleviate the burden of instantaneous CSI acquisition, we specifically explore the analog beamforming adapted to the second order channel statistics. Consequently, the dimension of the effective channel is reduced from the number of antenna elements to the number of RF chains. We need to deal with two major challenges: 1) four beamforming matrices are coupled together, including analog/digital precoders/combiners; 2) analog beamformers are based on channel statistics, while digital beamformers are based on instantaneous effective CSI. <br><br> We first consider decoupled designs of analog and digital beamforming to reduce the complexity of joint optimization. For fixed analog beamformers, we proposed a virtual sectorization scheme to optimize the digital beamforming based on partial effective CSI feedback. Simulating over real channel profiles from our measurement activities, we demonstrate advantages of the proposed scheme over the state of art method. We also proposed a framework to optimize such beamformers for the mm-wave channel, exploiting its directional characteristics and sparse nature,  to jointly incorporate the interaction between analog and digital beamforming. Furthermore, mindful of the scarce resource elements within a coherence block of mm-wave bandwidths, we also extend the above framework to incorporate the impact of training resource allocation, based on which we propose a user-centric virtual sectorization to maximize the overall network throughput. <br><br>
+		</li>
+		<li>
+			<b><i>Cloud RAN</i></b> : Originally conceived in 2001 as “base station cooperation”, and later known variously as “network MIMO” and “Cooperative Multipoint”, Cloud RANs allow antennas in different locations to form a distributed MIMO system allowing joint coordinated signal transmission, such that all signal energy is useful and no inter-cell interference is created. However, implementations involving full antenna cooperation may require very high capacity backhaul links connecting the antennas, a large channel estimation overhead and computational burden. Therefore, in this interest of making Claud RAN practically viable, WiDeS is working on the theoretical implications of several practical  limitations of Cloud RAN, such as limited backhaul capacities, backhaul link delays, limiting the number of antenna elements that can cooperate (referred to as cooperation cluster), mitigating un-coordinated interference, and minimization of energy consumption. Some of our recent work introduces the concept of interlaced clustering, which can mitigate un-coordinated interference, enabling ‘cell free’ Cloud RAN without a significant increase in implementation cost.<br><br>
+			<div class="row">
+				<div class="col-sm-2 col-md-3 col-lg-4"></div>
+				<div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+					<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/MIMO/main/CloudRAN.jpg" alt="HBF-1"></img>
+					<p style="text-align: center; margin-bottom: 20px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Cloud RAN<br><br></p>
+				</div>
+				<div class="col-md-2 col-md-3 col-lg-4"></div>
+			</div>
+		</li>
+	</ul>
 </div>
 
 <div id="UWBComm" class="container-fluid bg-grey just">
@@ -355,8 +355,9 @@
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	Ultrawideband (UWB) communications systems are commonly defined as systems with large absolute and/or large relative bandwidth. Such a large bandwidth offers specific advantages with respect to signal robustness, information transfer speed, and/or localization accuracy, but leads also to fundamental differences from conventional, narrowband, systems. 
 	In working on UWB, WiDeS is following in the footsteps of USC professor Bob Scholtz, the pioneer of UWB communications. Our current main areas of interest are:
-	<ul>
-		<li ><b>Design of low-complexity UWB transceivers</b> : The large system bandwidth of UWB may help resolve hundreds of channel scatterers which, while advantageous as previously discussed, also increases complexity of the receiver design. In coherent UWB receivers, a large number of Rake fingers maybe required to exploit the power received from these scatterers. WiDeS has over the years designed several low complexity receiver designs, that can significantly reduce the hardware cost of coherent UWB receivers. Our current work explores the limitations and benefits of such low complexity designs. We also leverage the ‘duality’ between UWB and MIMO transmission to enable new insight and new designs for either technologies. One recent award-winning paper introduces a new RAKE receiver - JS-Rake, that accounts for the channel estimation overhead of low complexity RAKE receivers to improve performance. Another popular receiver design for UWB is the transmitted-reference receiver that allows the demodulation of UWB signals without channel estimation and without the construction of coherent receivers (which often would be expensive and energy-consuming because of the large bandwidth and associated high sampling rate of the receivers). We are developing and prototyping a variety of such transmit reference implementations, with focus on improving throughputs, reducing noise accumulation and multi-user access. One recent prototype involves a new architecture for frequency shifted reference receivers that allows transmission of higher order modulation formats such as quadrature amplitude modulation. We furthermore investigate the use of extreme UWB spreading (10 GHz bandwidth) for jammer suppression.<br><br>
+	</p>
+	<ul style="clear: left;">
+		<li><b>Design of low-complexity UWB transceivers</b> : The large system bandwidth of UWB may help resolve hundreds of channel scatterers which, while advantageous as previously discussed, also increases complexity of the receiver design. In coherent UWB receivers, a large number of Rake fingers maybe required to exploit the power received from these scatterers. WiDeS has over the years designed several low complexity receiver designs, that can significantly reduce the hardware cost of coherent UWB receivers. Our current work explores the limitations and benefits of such low complexity designs. We also leverage the ‘duality’ between UWB and MIMO transmission to enable new insight and new designs for either technologies. One recent award-winning paper introduces a new RAKE receiver - JS-Rake, that accounts for the channel estimation overhead of low complexity RAKE receivers to improve performance. Another popular receiver design for UWB is the transmitted-reference receiver that allows the demodulation of UWB signals without channel estimation and without the construction of coherent receivers (which often would be expensive and energy-consuming because of the large bandwidth and associated high sampling rate of the receivers). We are developing and prototyping a variety of such transmit reference implementations, with focus on improving throughputs, reducing noise accumulation and multi-user access. One recent prototype involves a new architecture for frequency shifted reference receivers that allows transmission of higher order modulation formats such as quadrature amplitude modulation. We furthermore investigate the use of extreme UWB spreading (10 GHz bandwidth) for jammer suppression.<br><br></li>
 		<div class="row">
 			<div class="col-md-2 col-lg-3"></div>
 			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
@@ -411,8 +412,8 @@
 	</div>
 	</p>
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	At WiDeS, our research has contributed to the following breakthroughs:
-	<ol>
+	At WiDeS, our research has contributed to the following breakthroughs:</p>
+	<ol style="clear: left;">
 		<li>The suppressing of interference using time-hopping transmissions (i.e., the time-domain equivalent of spread-spectrum techniques).</li>
 		<li>Passive multi-target localization algorithms that are blocking and multipath aware.</li>
 		<li>Design and performance analysis of localization networks using stochastic geometry tools for modeling environment realizations. </li>
@@ -423,14 +424,14 @@
 <div id="WirelessVidDist" class="container-fluid bg-grey just">
 	<h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Wireless Video Distribution</h3><br> 
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	The majority of wireless internet traffic is driven by video-on-demand, such as Netflix, Amazon Prime, and Hulu. Video is characterized by a unique feature: many different people want to watch the same videos, though at different times. WiDeS has pioneered since 2011 system architectures that make special use of these properties to turn memory into bandwidth. This can be used to improve video throughput by orders of magnitude without the need for expensive densification of basestation with backhaul. Rather, our new architecture rests on two pillars - 
-	<ul>
+	The majority of wireless internet traffic is driven by video-on-demand, such as Netflix, Amazon Prime, and Hulu. Video is characterized by a unique feature: many different people want to watch the same videos, though at different times. WiDeS has pioneered since 2011 system architectures that make special use of these properties to turn memory into bandwidth. This can be used to improve video throughput by orders of magnitude without the need for expensive densification of basestation with backhaul. Rather, our new architecture rests on two pillars - </p>
+	<ul style="clear: left;">
 		<li><b>Femtocaching</b>, where a small base station without backhaul link, but with a large cache, stores popular files, and transmits them upon demand to the users. Since those stations do not need backhaul, they are extremely cheap to deploy, and since they can be placed with high density, result in high spectral efficiency.</li>
 		<li><b>Caching on devices together with device-to-device communications</b>: The concept of femtocaching can be pushed further by caching video files on the user devices themselves – while the caches would not be large enough to store all the videos a particular person might want to watch, the aggregate cache of the users in a particular area is large enough. Then, a user can get a required file via spectrally efficient D2D communication from another device, without having to go via the base station.</li>
-	</ul> <br></p>
+	</ul> <br>
 	<p style="clear: left; margin-left: 15px;" >
-	The WiDeS group is a pioneer of wireless video distribution. We invented (in collaboration with our USC colleagues Prof. Caire and Prof. Dimakis) both the concept of femtocaching, and caching combined with device-to-device communications. Both of these approaches can improve video throughput by orders of magnitude, by converting storage into bandwidth. These concepts have been taken up by groups all over the world and are now elaborated in hundreds of papers. At WiDeS, we are working at many aspects of such a system, including - 
-	<ul>
+	The WiDeS group is a pioneer of wireless video distribution. We invented (in collaboration with our USC colleagues Prof. Caire and Prof. Dimakis) both the concept of femtocaching, and caching combined with device-to-device communications. Both of these approaches can improve video throughput by orders of magnitude, by converting storage into bandwidth. These concepts have been taken up by groups all over the world and are now elaborated in hundreds of papers. At WiDeS, we are working at many aspects of such a system, including - </p>
+	<ul style="clear: left;">
 		<li>Fundamental, information-theoretic limits on throughput, energy efficiency, and latency.</li>
 		<li>Experimental investigation of popularity distributions and their spatio-temporal concentration, as well as machine-learning based algorithms for prediction.</li>
 		<li>Algorithms for caching and assignment of caches to users for downloading.</li>
@@ -481,8 +482,8 @@
 	</div>
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<b>Joint communication, computation, and caching</b><br><br>
-		Besides these video-caching oriented networking problems, we also consider issues of joint communication, computation, and caching. WiDeS has developed, in collaboration with Bell Labs, Lyapunov-drift based algorithms for assigning resources at data centers and routing methods for both wired and wireless networks. Our current works include the following aspects:
-		<ul>
+		Besides these video-caching oriented networking problems, we also consider issues of joint communication, computation, and caching. WiDeS has developed, in collaboration with Bell Labs, Lyapunov-drift based algorithms for assigning resources at data centers and routing methods for both wired and wireless networks. Our current works include the following aspects: </p>
+		<ul style="clear: left;">
 			<li>
 				<b>Augmented Information (AgI) Service : </b> The services provide end users with augmented information that results from the real-time processing of source information via possibly multiple service functions that can be hosted anywhere in the cloud network. Software defined networking (SDN) technologies can then be used to steer network flows through the appropriate chain of network functions.<br><br>
 				<div class="row">
@@ -515,7 +516,7 @@
 	<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	While MIMO-OFDM has become the standard data transmission approach, the development of novel modulation and multiplexing methods is not standing still. While it was shown, e.g., that OFDM is the optimum transmission method for frequency-selective method under certain assumptions, not all these assumptions need be satisfied in practical situations. Similarly, spatial multiplexing may become challenging in the presence of certain hardware limitations. We thus investigate novel approaches, such as -
 	<ul>
-		<li><b>Orbital Angular Momentum (OAM) multiplexing</b> : OAM can be interpreted as a “phase twist” imposed on a wave propagating down the axis. Different OAM “modes” with different phase twists (but propagating down the same axis) are orthogonal to each other, and thus can carry different data streams. This feature is especially useful for line-of-sight links that need to carry several Gbit/s. A key advantage of OAM modes is that they can be separate by analog components, thus obviating the need for spatial equalizers operating at ultra-high computational speeds. In collaboration with Prof. Alan Willner (link), the pioneer of OAM, we have worked on theory and prototyping of OAM in the mm-wave regime, and – inter alia – demonstrated 32 GBit/s transmission in the 28 GHz band.</li><br>
+		<li style="clear: left;"><b>Orbital Angular Momentum (OAM) multiplexing</b> : OAM can be interpreted as a “phase twist” imposed on a wave propagating down the axis. Different OAM “modes” with different phase twists (but propagating down the same axis) are orthogonal to each other, and thus can carry different data streams. This feature is especially useful for line-of-sight links that need to carry several Gbit/s. A key advantage of OAM modes is that they can be separate by analog components, thus obviating the need for spatial equalizers operating at ultra-high computational speeds. In collaboration with Prof. Alan Willner (link), the pioneer of OAM, we have worked on theory and prototyping of OAM in the mm-wave regime, and – inter alia – demonstrated 32 GBit/s transmission in the 28 GHz band.</li><br>
 		<div class="col-xs-12 col-sm-12 col-md-2 col-lg-3"></div>
 		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
 			<img class="col-xs-12 col-sm-0 col-md-12 col-lg-12" style="margin-bottom: 20px;" src="./images/Research/Systems/Modulation/main/OAM_Principle-1.jpg" alt="Principle of OAM"></img>
@@ -586,3 +587,4 @@ $(document).ready(function(){
 
 </body>
 <html>
+	
