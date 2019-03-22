@@ -1,3 +1,3 @@
-# Wireless Devices and Systems Group Website
+#### Wireless Devices and Systems Group
 
-Designed and Developed by Aayush Khanna
+2k17 version of the site for the WiDeS research group at USC live @ http://wides-usc.com/
